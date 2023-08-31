@@ -1,0 +1,84 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">    
+<br>
+<h2><span style="color: #8B6DEA;">GFP Repricing</span></h2>
+    
+<br>
+    
+<p>As of May 1st, 2022, some clients will be allowed a special discount due to GFP Repricing.</p>
+<p>These clients will be marked as ‘Loyalty discount’ on Account level in Salesforce by Sales.</p>
+<p>At the end it was decided that ALL contract-products that will profit from this discount should be created by Admins to avoid any difficulties.</p>
+
+<br>
+    
+<p contenteditable="true"><strong>How to proceed in this case?</strong></p>
+<ul class="none">
+    <li>You should receive a request from the partner to set-up this CP (possibly to modify if they proceed with the creation itself)</li>
+    <li>You need to check in this file - <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7BC1B860A4-78CD-442A-92A8-8A2570EE8AC7%7D&file=Impact%20repricing%20on%20Current%20GFP%2020220422.xlsx&action=default&mobileredirect=true" target="_blank">Impact repricing on Current GFP 20220422.xlsx</a> - if the customer is indeed eligible for the loyalty discount of 10%</li>
+        <ul class="nested">
+            <li>This you can check by navigating to the sheet “Customers getting an extra discount” and locating the customers</li>
+        </ul>   
+    <li>You will also see that the customers in Salesforce that can benefit from the extra discount have the field ‘Loyalty discount’ tagged so partners can check it as well</li>
+    <li>In case the customer is eligible, proceed with the creation/update of the CP and add the extra % to the ‘Discount: Loyalty’ field. Not all CPs will get an extra 10%, it might be lower %</li>
+    <li>However, the maximum discount the customer can have in the field ‘Discount (%)’ would be then 20%</li>
+    <li>It is important to note that the total Discount will need to be written on the field ‘Discount (%)’ as it does NOT calculate automatically! <br> Example: If the CP has the normal 10% discount and an extra 8% loyalty discount then the field ’Discount (%)’ = 18 % and the field ‘Discount: Loyalty’ = 8%</li>
+    <li>Please remember to untag the field ‘Loyalty discount’ on the Account level so the partner knows that their extra discount has been used and can’t be used anymore in the next renewal!</li>
+    </ul>
+        
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</main>
+    
+
+ <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>    
+    
+    
+</body>
+
+
+
+
+
+
+</html>

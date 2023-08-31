@@ -1,0 +1,112 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">    
+<br>
+<h2><span style="color: #8B6DEA;">Marketplace procedure</span></h2>
+<p>For each job ordered via the marketplace:</p>
+<ul class="none">
+    <li>A customer is created (if the customer is ordering for the first time via marketplace channel for the same provider)</li>
+    <li>A lead is created automatically in SalesForce </li>
+    <li>A listing is created in FlashPost with source identified as "marketplace"</li>
+    <img src="resources_images/Mkt_1.png" style="margin-top: 0.5%;"> 
+    <br><br>
+
+    <li>A new channel is automatically created for the customer (and delegated if needed)</li>
+    <li>Job listings are sent to the partner automatically either:</li>
+        <ul class="nested">
+            <li>Immediately via email override</li>
+            <li>After channel delegation if the job board doesn't accept email override (only Daijob, Appcast US &amp; CA and Infojobs.net). IMPORTANT: marketplace listings posted on one of these job boards will be queued and sent automatically whenever the job board confirms the credentials.</li>
+          </ul>
+    <li>Partners are receiving the jobs using the usual method (email containing a link redirecting the user to listing details  + CP and PO ref + confirmation step)</li>
+</ul>
+    
+<br>
+
+<p>In <strong>Salesforce</strong>:</p>
+<ul class="none">
+    <li>CP for the job posted is created automatically for each marketplace listing</li>
+    <li>In PO created automatically</li>
+    <li>In PO validated automatically</li>
+    <li>Out PO created automatically (and included on job listing confirmation page for inbound partner)</li>
+</ul>
+    
+<br>
+
+<p>In case of <strong>SalesForce errors</strong>:</p>
+<ul class="none">
+    <li>Notification is sent to #marketplace channel</li>
+    <li>Job listing is put in error status. Inbound partners are receiving FP job listing email but can't open the job listing details page and sees a dedicated error.</li>
+    <li>In case of error notified in #marketplace channel, check in SF for potential configuration problems (missing WW, missing country, expired contract, etc)</li>
+    <li>Delete all records that FP may have created (CP, POs)</li>
+    <li>Repost the listing in FP</li>
+</ul>
+    
+<br>
+
+<p>In case the <strong>job board reports an error</strong> and can't post the job for some reason:</p>
+<ul class="none">
+    <li>If not done by the partner, put the listing in ERROR</li>
+    <li>Inform Broadbean by email of the problem (email address to be confirmed) stating the problem and asking them to refund</li>
+    <li>Check if PO, CP, POLIS etc can be deleted in SF</li>
+</ul>
+    
+<br>
+    
+<p>See here the <strong><u>process flowchart </u></strong>:</p>
+<img src="resources_images/Mkt_2.png" style="margin-top: 0.5%; margin-left: 20px;">
+    
+<br>
+<br>
+<br>
+<br>
+    
+    
+</main>
+    
+    <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>   
+    
+    
+</body>
+
+
+
+
+
+
+</html>
