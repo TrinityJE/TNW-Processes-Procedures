@@ -30,7 +30,12 @@ a {
     color: #EB4177;
     text-decoration: none;
 }
-        
+
+#sidenote {
+    font-size: 12px;
+}
+
+
 /* Top navigation */ 
 .topnav {
     width: auto;
