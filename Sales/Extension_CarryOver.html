@@ -50,6 +50,16 @@
 
 <h3>Carry over</h3>
 <p>In case a contract is about to end and the customer has unused inventory, carry-over of credits could be allowed for the 20% of the remaining net credits under the condition that the customer renews with a contract value equal or greater than the one about to expire.</p>
+<p>To process Carry Over in Salesforce, follow <strong>this procedure:</strong></p>
+<ul>
+    <li>Carry over product(s) should be created by admins only (it will not be possible for partners once we are using CPQ contract creation for everyone anyway)</li>
+    <li>Create CP(s) for the carry over credit(s) and use the CP attribute ‘Carry Over’</li>
+    <li>This will prompt you to fill in a new field – Original contract-product reference</li>
+    <li>Fill in this field by including the original CPs reference number so we can track with CP(s) is being carried over</li>
+</ul>
+    
+<br>
+    
 <p>In case a customer has already carried over credits in the previous contract, the 20% will be calculated from the net remaining credits. This means that the credits that were already carried over will be subtracted from the number of credits remaining, before calculating the 20% that can be carried over.<strong>It can be difficult to follow up, but, yes, its possible.</strong></p>
 <p>Example:</p>
 <p><strong>1<sup>st</sup> year</strong></p>
@@ -75,11 +85,11 @@
     <li>Total listings to carry over 20% of 99 listings = 20listings</li>
 </ul>
 
+<br>
+    
     
 </main>
     
-
-
 <br>
 <br>
 <br>
