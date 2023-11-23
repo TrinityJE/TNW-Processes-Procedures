@@ -1,0 +1,89 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">    
+<br>
+<h2><span style="color: #8B6DEA;">Conversion</span></h2>
+<p>Conversion used to be something offered only in exceptional cases, and it got more standardised during COVID period. However, in 2023 it was decided that conversion will become a normal procedure, and a whole process (and Salesforce developmnt) was created for it.</p>
+
+<br>
+
+<p>The new conversion procedure is as follows:</p>
+<ul>
+    <li>GFP conversion to local always allowed</li>
+    <li>GFP conversion to GFP conversion is allowed using the following rules*</li>
+    <li>Use <a href="Conversion.xlsx">Conversion.xlsx</a> to figure out the credits that should be converted</li>
+    <li>Create CP(s) for the converted product(s) and use the CP attribute ‘Conversion’</li>
+    <ul>
+        <li>This is important for reporting purposes </li>
+        <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!! </li>
+    </ul>
+    <li>Issue the PO for the converted product(s)</li>
+    <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be GFP):</li>
+    <ul>
+        <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header)</li>
+        <li>This is very important as credits in such a PO will not be counted into ‘consumed’ field of the CP but into newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
+    </ul>
+    <li>Issue the PO to TNW</li>
+    <li>The number of credits should be the number of credits being converted</li>
+    <li>Once OUT PO is created, change the ‘You can invoice us €’ field into 0€</li>
+    <li>Check that the splits are 0/0/0</li>
+</ul>
+    
+<br>
+    
+<p id="sidenote">* You can only convert GFP credits into a higher, EXISTING level. For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can be only converted into local credits.</p>
+  
+    
+</main>
+
+
+    
+<br>
+<br>
+<br>
+    
+</body>
+
+
+   <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>  
+    
+
+
+
+</html>

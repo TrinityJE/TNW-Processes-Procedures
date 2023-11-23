@@ -1,0 +1,112 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">    
+<br>
+<h2><span style="color: #8B6DEA;">Extension &amp; Carry Over</span></h2>
+<p>The Network allows either Extension or Carry Over, depending on the case. However, the rule says we should not allow both, unless agreed with sales.</p>
+
+<br>
+
+<h3>Extension of a contract</h3>
+<p>Contract extension is allowed only in exceptional cases. It is understood that for some contracts, extra renewal negotiation time might be needed, therefore the application of 2 extra months as extension. The selling partner is requested to get approval from The Network before granting these to the customer.</p>
+<p>CS Team is in charge of this procedure now:</p>
+<ul>
+    <li>For GFP – CS team to approve; for local it’s the receiving partner who needs to give approval.</li>
+    <li>Exceptional cases: extension + carry over can be granted (when extra tool is needed for negotiation).</li>
+    <li>Renewal is NOT a must anymore in order to extend the contract.</li>
+</ul>
+
+<br>
+
+<h3>Carry over</h3>
+<p>In case a contract is about to end and the customer has unused inventory, carry-over of credits could be allowed for the 20% of the remaining net credits under the condition that the customer renews with a contract value equal or greater than the one about to expire.</p>
+<p>To process Carry Over in Salesforce, follow <strong>this procedure:</strong></p>
+<ul>
+    <li>Carry over product(s) should be created by admins only (it will not be possible for partners once we are using CPQ contract creation for everyone anyway)</li>
+    <li>Create CP(s) for the carry over credit(s) and use the CP attribute ‘Carry Over’</li>
+    <li>This will prompt you to fill in a new field – Original contract-product reference</li>
+    <li>Fill in this field by including the original CPs reference number so we can track with CP(s) is being carried over</li>
+</ul>
+    
+<br>
+    
+<p>In case a customer has already carried over credits in the previous contract, the 20% will be calculated from the net remaining credits. This means that the credits that were already carried over will be subtracted from the number of credits remaining, before calculating the 20% that can be carried over.<strong>It can be difficult to follow up, but, yes, its possible.</strong></p>
+<p>Example:</p>
+<p><strong>1<sup>st</sup> year</strong></p>
+<ul>    
+    <li>Contract volume: 100 listings</li>
+    <li>Remaining volume at contract end: 50 listings</li>
+    <li>Total listings to carry over 20% of 50 = 10 listings to carry over to next contract</li>
+</ul>
+<p><strong>2<sup>nd</sup> year</strong></p>
+<ul>
+    <li>New purchased volume: 100 listings</li>
+    <li>Total volume: 100 + 10 = 110 listings</li>
+    <li>Remaining volume at contract end: 40 listings</li>
+    <li>Net remaining volume: 40 listings - 10 listings (already carried over in year 1) = 30 listings</li>
+    <li>Total listings to carry over 20% of 30 listings = 6 listings to carry over next contract</li>
+</ul>
+<p><strong>3<sup>rd</sup> year</strong></p>
+<ul>
+    <li>New purchased volume: 200 listings</li>
+    <li>Total volume: 200 + 6 = 206 listings</li>
+    <li>Remaining volume at contract end: 105 listings</li>
+    <li>Net remaining volume: 105 listings - 6 listings (already carried over in year 2) = 99 listings</li>
+    <li>Total listings to carry over 20% of 99 listings = 20listings</li>
+</ul>
+
+<br>
+    
+    
+</main>
+    
+<br>
+<br>
+<br>
+<br>
+    
+</body>
+
+
+   <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>  
+    
+
+
+
+</html>
