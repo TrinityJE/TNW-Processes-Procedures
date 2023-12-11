@@ -33,37 +33,43 @@
 <main class="div">    
 <br>
 <h2><span style="color: #8B6DEA;">Conversion</span></h2>
-<p>Conversion used to be something offered only in exceptional cases, and it got more standardised during COVID period. However, in 2023 it was decided that conversion will become a normal procedure, and a whole process (and Salesforce developmnt) was created for it.</p>
+<p>Conversion used to be something offered only in exceptional cases, and it got more standardized during the COVID period. However, in 2023 it was decided that conversion would become a normal procedure, and a whole process (and Salesforce development) was created for it.</p>
 
 <br>
 
 <p>The new conversion procedure is as follows:</p>
 <ul>
-    <li>GFP conversion to local always allowed</li>
-    <li>GFP conversion to GFP conversion is allowed using the following rules*</li>
-    <li>Use <a href="Conversion.xlsx">Conversion.xlsx</a> to figure out the credits that should be converted</li>
+    <li>GFP conversion to local is always allowed</li>
+    <li>GFP conversion to GFP conversion is <u>only</u> allowed into a higher, EXISTING level. (For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can only be converted into local credits.)using the following rules</li>
+    <li>Use <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion.xlsx</a> to figure out the credits that should be converted</li>
+    <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be a GFP):</li>
+    <ul>
+        <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header); check if the checkbox is correctly marked both in the IN and OUT PO</li>
+        <li>The PO should be issued to The-Network.1</li>
+        <li>The number of credits should be the number of credits being converted</li>
+        <li>Once OUT PO is created, change the ‘You can invoice us €’ field to 0€</li>
+        <li>Check that the splits are 0/0/0</li>
+        <li>This is very important as credits in such a PO will not be counted into the ‘consumed’ field of the CP but into the newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
+    </ul>
     <li>Create CP(s) for the converted product(s) and use the CP attribute ‘Conversion’</li>
     <ul>
-        <li>This is important for reporting purposes </li>
-        <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!! </li>
+        <li>This is important for reporting purposes</li>
+        <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!!</li>
     </ul>
-    <li>Issue the PO for the converted product(s)</li>
-    <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be GFP):</li>
+    <li>Issue a PO for the converted product(s) if necessary (in case of non-job listing products; for job listing products, PO will be created automatically upon import of the CP into FP)</li>
+    <li>As for changes to be done in FlashPost:</li>
     <ul>
-        <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header)</li>
-        <li>This is very important as credits in such a PO will not be counted into ‘consumed’ field of the CP but into newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
+        <li>Remove the converted GFP credits from the wallet via subtract</li>
+        <li>Add the new local/GFP credits to the wallet via import</li>
+        <li>Send a delegation email for the conversion (using 'conversion' as a delegation reason)</li>
+        <li>Check and validate the PO created via import</li>
     </ul>
-    <li>Issue the PO to TNW</li>
-    <li>The number of credits should be the number of credits being converted</li>
-    <li>Once OUT PO is created, change the ‘You can invoice us €’ field into 0€</li>
-    <li>Check that the splits are 0/0/0</li>
 </ul>
     
 <br>
     
-<p id="sidenote">* You can only convert GFP credits into a higher, EXISTING level. For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can be only converted into local credits.</p>
-  
     
+
 </main>
 
 
