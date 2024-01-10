@@ -44,26 +44,27 @@
 <br>
     
 <h3>For <strong>GFP credits</strong>:</h3>
-    <ul class="none">
-        <li>If you allow to use Self-Service for GFP credits, go to Salesforce and ensure that the 'posting method' is 'FlashPost Regular'</li>
-        <li>In FP, from the customers tab, click on the 'Import' button</li>
-        <li>Enter the contract ID</li>
-        <li>If the contract is valid and that the customer doesn't already exist, you should reach the customer creation page. Provide all required information and enable the 'self-service' toggle button (also enable the customer)</li>
-        <img src="resources_images/FP_SS_1_1.png" width="650" height="220" style="margin-top: 0.5%;">
-        <br><br>
-    
-        <li>Save the customer</li>
-        <li>Select channels which need to be imported and click on 'Import and delegate' channel</li>
-        <img src="resources_images/FP_SS_1_2.png" width="650" height="220" style="margin-top: 0.5%;">
-        <br><br>
-        
-        <li>Check channels (email overwrite in case of fully automated partners) and wallet (a "Salesforce imported and monthly PO enabled" wallet ) which were automatically created.</li>
-    </ul>
-    
+<ul class="none">
+    <li>If you allow to use Self-Service for GFP credits, go to Salesforce and ensure that the 'posting method' is 'FlashPost Regular' (all CPs of the contract has to be FP Regular, even if there are CPs that were already imported as Self-Service)</li>
+    <li>If this is an existing customer with an existing wallet, in FP:</li>
+        <ul>
+            <li>Change the customer from SeSe to Regular</li>
+            <li>Change the wallet type from SeSe to Salesforce Imported</li>
+        </ul>
+    <li>If new customer, or if changes above done, import the credits and follow the standard procedure</li>  
+    <li>DO NOT delegate the channels; once customer/wallet is created via the import, create 'email override' channels manually (unless Infojobs, OCC, Appcast)</li>
+    <li>Go back to the customer and change it into 'Self-Service'</li>
+    <img src="resources_images/FP_SS_1_1.png" width="650" height="220" style="margin-top: 0.5%;">
+</ul>
+
+<br><br>
+
 <p><strong>IMPORTANT</strong>: If this process was used for importing partially used CP with local jobs, the partner still needs to create a PO for the remaining credits as local jobs will not be part of the monthly PO! In case there are <strong>only LOCAL jobs</strong> in the wallet, you should change the wallet type into 'Self-Service' for further upsells</p>
     
 <br>
-    
+<br>
+<br>
+
 </main>
     
     
