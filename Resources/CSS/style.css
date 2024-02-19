@@ -15,19 +15,20 @@ h1 {
 h2 {
     font-family: "Shantell Sans";
     text-transform: uppercase;
+    color: rgb(254, 221, 146);
 }
 
 h3 {
     font-family: "Shantell Sans";
-    color: #C9BEEC;
+    color: rgb(168, 188, 210);
 }
 
 h4 {
     font-family: "Shantell Sans";
-    color: #B9F1B9;
+    color: rgb(168, 188, 210);
 }
 a {
-    color: #EB4177;
+    color: rgb(216,137,142);
     text-decoration: none;
 }
 
@@ -35,6 +36,9 @@ a {
     font-size: 12px;
 }
 
+strong {
+    color: rgb(101, 170, 173);
+}
 
 /* Top navigation */ 
 .topnav {
@@ -43,7 +47,7 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 2px solid #8B6DEA;
+    border-bottom: 2px solid rgb(254, 221, 146);
 }
         
 .topnav a {
@@ -101,7 +105,7 @@ a {
     display: inline-block;
     position: relative;
     float: left;
-    background: #8B6DEA;
+    background: rgb(192,69,67);
     font-size: 1.2em;
     font-weight: 700;
     text-transform: capitalize;
@@ -126,7 +130,7 @@ a {
 }
     
 #nav li:hover {
-    background: #4C3693;
+    background: rgb(166,19,29);
 }
 
 /*--- Sublist Styles ---*/
@@ -155,7 +159,7 @@ a {
 #nav li .level1,
 #nav li .level2 {
     font-family: Calibri, sans-serif;
-    background-color: #C9BEEC;
+    background-color: rgb(216,137,142);
     border-top: 3px solid #000;
     border-left: 0;
     border-bottom: 0;
@@ -164,7 +168,7 @@ a {
         
 #nav li .level1:hover,
 #nav li .level2:hover {
-    background-color: #8567B0;
+    background-color: rgb(166,19,29);
 }
         
 #nav li .level2 {
@@ -174,6 +178,11 @@ a {
 }
 
 /* Unordered lists within procedures */ 
+.noneol {
+    color: white;
+    line-height: 180%;
+}
+
 .none {
  list-style:initial;
  color:white;
@@ -254,4 +263,22 @@ footer {
     .TNWA {
         width: 150px;
     }
+    
+    .topnav {
+        width: auto;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid rgb(254, 221, 146);
+        }
+    
+    #searchbar {
+        margin-left: 600px;
+    }
+    
+    #logo {
+        margin-left: 680px;
+    }
+    
 }

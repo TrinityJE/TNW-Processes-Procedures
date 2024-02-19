@@ -1,0 +1,99 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">   
+    
+<br>
+    
+<h2>Jobbdirekte new procedure</h2>
+<p>Jobbdirekte is now created as a partner in Salesforce &amp; each transaction should be recorded in there.</p>
+<p>The <strong>reasons</strong> for this change are: </p>
+<ul class="none">
+    <li>Having the values in SF will allow us to calculate our revenue more effeciently</li>
+    <li>We no longer need a special procedure for invoicing partners as POs will be directly included in monthly invoices</li>
+    <li>We will be able to match Jobbdirekte invoice againts actual POs</li>
+</ul>
+
+<br>
+
+<h3>CS procedure:</h3>
+<ul class='none'>
+    <li>There is NO WAY to confirm the final EURO price before having an actual job listing</li>
+    <li>Once you receive the job listing from the selling partner, send it to Norway (Anne-Lene) to get a confirmation on the final price</li>
+    <li>Once you receive a confirmation from Jobbirekte on the final price, you <strong>MUST</strong> confirm it back within 48h!!!</li>
+    <li>Then, create a new customer in Salesforce (or add the order to an existing account)</li>
+    <li>Add Norway as Account-Country (no WW will be launched or needed for the contract/PO creation)</li>
+    <li>Create a 12-month contract and a Contract-Product with the purchased services to Norway</li>
+    <li>You will need to calculate the total net amount using <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7BFC940F79-F70B-4B40-98BA-50FA6F98C3E5%7D&file=Norway_calculation%20form.xlsx&action=default&mobileredirect=true" target="_blank">this calculator</a></li>
+    <li>Create a PO and POLI:</li>
+        <ul class="nested">
+            <li>In case of Jobbdirekte/Purehelp, simply check if the "You can invoice us" amount corresponds to the amount Jobbdirekte asked for</li>
+            <li>In case of Jobbdirekte/Purehelp + Finn, change the "You can invoice us" amount with the amount Jobbdirekte asked for &amp; the splits will adjust automatically</li>
+        </ul>
+</ul>
+
+<br>
+
+<h3>Finance procedure:</h3>
+<p>With Jobbdirekte in Salesforce, finance procedure becomes the same as for other partners:</p>
+<ul class="none">
+    <li>Make sure the invoice includes EUR amount and that it matches with what's in "You can invoice us"</li>
+    <li>Process the invoice in Salesforce and add it to the file for our accountant</li>
+    <li>IN POs will be included in monthly invoices sent to partners</li>
+</ul>
+        
+
+<br>
+<br>
+        
+        
+</main>
+    
+
+<!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>
+    
+    
+    
+</body>
+
+
+
+
+
+
+</html>

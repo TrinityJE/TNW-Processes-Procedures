@@ -1,0 +1,95 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">  
+    
+<br>
+    
+<h2>eCommerce - offline order</h2>
+<p>Whenever we receive a slack notification mentioning that a user tried to register again on the platform (message: “User xxxxx tried to register again on ecommerce platform”), <a href="mailto:sales@the-network.com">sales@the-network.com</a> will contact the customer to figure out if they need assistance to purchase their listing and gather their contact information (if the one we have already gathered during the initial process aren’t sufficient)<p>
+    
+<br>
+
+<h3>How to proceed if customer wants to purchase?</h3>
+<ul class='none'>
+    <li>If the customer wants to purchase, Sales informs <a href="mailto:cs@the-network.com">cs@the-network.com</a>, who then will issue an invoice in Stripe:</li>
+        <ul class='nested'>
+            <li>Click the “Create payment” button </li>
+            <li>Create the customer in Stripe using the customer contact information (billing address, etc) collected earlier. If the customer is from the EU make sure that the VAT id of the customer is specified</li>
+            <li>Add item price and details, such as “Standard listing on Stepstone.be”</li>
+            <li>Select the option to “email an invoice to the customer to pay manually”</li>
+            <li>Specify a payment due date: 3 days</li>
+            <li>Click on “open the invoice editor”</li>
+            <li>In advanced options, check <img src="resources_images/eComm_2.png" style="margin-top: 0.5%; margin-bottom: -15px; margin-left: 5px;"></li>
+            <br>
+            <li><strong>Important:</strong> if the customer is from Germany, remove from the invoice footer (in advanced options) “ Non-taxable accordingly to sect. 3a para. 2 German Value Added Tax Law.”</li>
+        </ul>
+</ul>
+    
+<br>
+    
+<h3>How to proceed if payment is done by the customer before invoice expires?</h3>
+<ul class='none'>
+    <li>If payment is done by the customer before invoice expires (based on the due date defined above), several cases may occur:</li>
+        <ul class='nested'>
+            <li>The customer had already been created in FP and listing content can be found in FlashPost as a listing “To validate”<strong>&#8594;</strong> we enable the ecommerce customer created, create a wallet corresponding to the listing purchased, copy the existing listing content and post the job on behalf of the customer. The user, which was automatically created during the registration process and corresponds to the customer, needs to be enabled.</li>
+            <li>The customer wasn’t created in FP yet and the listing content is not available in FP <strong>&#8594;</strong> a new FP customer needs to be created (with _ecomm suffix) together with a wallet. The user which was automatically created during the registration process and corresponding to the customer needs to be enabled. We can then ask the customer to post the listing by themselves in RA.</li>
+        </ul>
+    <li>Send the Stripe invoice automatically generated to <a href="mailto:finance@the-network.com">finance@the-network.com</a></li>
+    <li>CS informs <a href="mailto:sales@the-network.com">sales@the-network.com</a> that a lead can be created (preferably in SF so that we can keep track)</li>
+</ul>
+
+    
+<br>
+<br>  
+                
+    
+</main>
+    
+
+  <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>   
+    
+    
+</body>
+
+
+
+
+
+
+</html>

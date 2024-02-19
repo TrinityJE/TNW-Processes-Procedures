@@ -1,0 +1,87 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">   
+    
+<br>
+    
+<h2>Creating a new Self-Service customer on behalf of the partner</h2>
+<p>This process allows you, as an admin to allow partners requesting the usage of the basic posting form for customers with <strong>more than 10 credits (any types of credits, including GFP)</strong>.</p>
+<p>If the customer purchased less than 10 credits per CP they should proceed with the import themselves by logging in as a partner.</p>
+
+<br>
+
+<h3>For local credits:</h3>
+<p>If you allow to use Self-Service for more than 10 credits, go to Salesforce and change the 'posting method' field of the CP into 'Self-Service'; once done, the partner will be able to import this customer (or add this CP to an existing SS customer) himself </p>
+<p><strong>IMPORTANT</strong>: this is only possible for NON-USED CPs; if there is a used CP, go to the procedure about GFP credits)</p>
+   
+<br>
+    
+<h3>For GFP credits:</h3>
+<ul class="none">
+    <li>If you allow to use Self-Service for GFP credits, go to Salesforce and ensure that the 'posting method' is 'FlashPost Regular' (all CPs of the contract has to be FP Regular, even if there are CPs that were already imported as Self-Service)</li>
+    <li>If this is an existing customer with an existing wallet, in FP:</li>
+        <ul class='nested'>
+            <li>Change the customer from SeSe to Regular</li>
+            <li>Change the wallet type from SeSe to Salesforce Imported</li>
+        </ul>
+    <li>If new customer, or if changes above done, import the credits and follow the standard procedure</li>  
+    <li>DO NOT delegate the channels; once customer/wallet is created via the import, create 'email override' channels manually (unless Infojobs, OCC, Appcast)</li>
+    <li>Go back to the customer and change the type into 'Self-Service'</li>
+    <img src="resources_images/FP_SS_1_1.png" width="750" height="320" style="margin-top: 0.5%;">
+</ul>
+
+<br><br>
+
+<p><strong>IMPORTANT</strong>: If this process was used for importing partially used CP with local jobs, the partner still needs to create a PO for the remaining credits as local jobs will not be part of the monthly PO! In case there are <strong>only LOCAL jobs</strong> in the wallet, you should change the wallet type into 'Self-Service' for further upsells</p>
+    
+<br>
+<br>
+<br>
+
+</main>
+    
+    
+ <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>  
+    
+        
+</body>
+
+
+
+</html>

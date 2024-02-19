@@ -1,0 +1,159 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">   
+    
+<br>
+    
+<h2>Yearly Invoices</h2>
+<p>The Network is issuing a yearly invoice to all its partners. This invoice is based on report of active and received sales for the given year that should be pre-run in December but the final update should happen at the beginning of January to have the full view of the previous year.</p>
+<p>The most important points connected to yearly invoices are:</p>
+<ul class="none">
+    <li>Issued in the first 2 months of the given year (Jan - Feb)</li>
+    <li>They comprise of Salesforce license fee + Marketing Budget (partnership fee)</li>
+    <li>If partner's active and received sales are less than 30k, they are recharged half of SF yearly fee</li>
+    <li>In our T&amp;Cs:
+        <p><I>Partner shall pay 950 USD per User License per year for the use of the CRM. Each Partner purchases at least one User License. That price can evolve in time because of salesforce pricing changes or exchange rate evolution between Euros and USD. The yearly fee shall be invoiced upfront at the beginning of each year and shall be payable within 30 days.</I></p></li>
+    <li>Partnership fee is 750 EUR in the 1st year and 1500 EUR 2nd year and after, as per details in our T&amp;Cs:
+        <p><I>Year one of Partnership: 750 €, if a Partners joins the Network before July, the Network will invoice 750 € during that year. If a Partner joins the Network in or after July, the Network will invoice these 750 € in January of the following year.</I></p></li>
+    <li>StSt Group, JobCloud and Figaro are our <strong>shareholders</strong>, paying higher partnership fee + shareholder fee, as per details in our T&amp;Cs:</li>
+    <ol class='noneol'>
+        <li>StepStone Group EMEA: 185.000 €</li>
+        <li>Figaro Classifieds A.S.: 105.000 €</li>
+        <li>Jobcloud AG: 105.000 €</li>
+    </ol>
+</ul>
+
+<br>
+
+<h3>The Yearly Invoice Procedure is as follows:</h3>
+<p>1. In December, go to the folder <a href="https://stepstonecore.sharepoint.com/sites/TheNetwork/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheNetwork%2FShared%20Documents%2FNETWORK%20TEAM%2FFINANCE%2FINVOICES%20FROM%20NETWORK%20TO%20PARTNERS&viewid=185cfc1b%2Dff3b%2D4a9f%2Db6d5%2D3228a9ed6439" target='_blank'>Invoices from Network to Partners</a> and:</p>
+<ul class="none">
+    <li>Go to the current year folder, Yearly invoices subfolder, and open the ‘xxxx yearly invoices’ excel file</li>
+    <li>Save the file as a copy</li>
+    <li>Go back to <a href="https://stepstonecore.sharepoint.com/sites/TheNetwork/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheNetwork%2FShared%20Documents%2FNETWORK%20TEAM%2FFINANCE%2FINVOICES%20FROM%20NETWORK%20TO%20PARTNERS&viewid=185cfc1b%2Dff3b%2D4a9f%2Db6d5%2D3228a9ed6439" target='_blank'>Invoices from Network to Partners</a> and create a new folder for the following year, subfolder Yearly invoices</li>
+    <li>Save the copy in here and rename it into ‘xxxx yearly invoices’ (i.e., 2023 yearly invoices) + remember to rename all the tabs into the current year</li>
+</ul>
+<p>2. For the <strong>pre-liminary check</strong>, open the file and work with the following tabs:</p>
+<ul class='none'>
+    <li>Budget information = a list of partners with the final invoice amount to invoice / what we are invoicing them for / notes if we should invoice them or not, if we should include some fees or not, etc. There are few partners we do not invoice as they invoiced us for less than 5K in the previous year; they could leave the alliance (usually marked in yellow) </li>
+    <li>CRM Users data = info about SF users</li>
+    <li>CRM Users xxxx = final data on SF users + calculation on the number of SF users per partner</li>
+    <li>All in xxxx = the main tab where we are gathering all the info and doing the actual calculations</li>
+    <ul class='nested'>
+        <li>We can find here ALL partners, even those that we do not invoice or that we do not work with anymore (majority are now hidden), including our shareholders JobCloud + StepStone Group + Figaro</li>
+        <li>Here we decide if a partner should have a full / half / or none recharge (the general rule is = if the sum of Sales is more than 30.000€, then full recharge, if it is less than 30.000€, then half recharge + some partners (less then 5.000€ as per above) are not recharge at all</li>
+    </ul>
+    <li>Partners Values (hidden) = data about partner's active and received sales</li>
+</ul>
+    
+<p>3. First, we start with the check of <strong>CRM users</strong> for the given year:</p> 
+<ul class='none'>
+    <li>Go to Salesforce and run <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00O07000000JtuKEAS/view?queryScope=userFolders" target="_blank">Active users of Salesforce</a> report</li>
+    <li>Keep the filters as they are and export the file</li>
+    <li>Merge first and last name for the purpose of our pre-liminary report; simply take the first two columns and copy paste them into the tab ‘CRM Users data’ (we need to unhide the tab); there is already a formula which will create the merged name for us (pay attention that you override all the data from last year – if there are less users this year!)</li>
+    <li>Then, simply copy paste the rest of the information (profile, company name, username, active, last login, and created date)</li>
+    <ul class='nested'>
+        <li>Column G (active) might give us an error as it is not a number – simply click on the error and say you want to convert it to a number</li>
+        <li>For columns H (last login) and I (create date), change the format to short date</li>
+    </ul>
+    <li>Sense check that each entry has a correct company name (correct if you see some discrepancies and synchronize the naming)</li>
+    <li>Once the data in the tab ‘CRM Users data’ is correct, we simply take it and copy paste it into the tab ‘CRM Users xxxx’ – careful when coping, double check that NO old data stayed in</li>
+    <li>In the tab 'CRM Users xxx', refresh the pivot table</li>
+</ul>
+
+<p>4. Now we move to the tab '<strong>Partners values'</strong> to get the accurate sales data (we need to unhide the tab):</p>
+<ul class='none'>
+    <li>Ask the Power BI expert to either insert the data for active &amp; received sales or do it yourself if provided in excel format</li>
+</ul>
+    
+<p>5. Next, go to the main tab <strong>‘All in xxxx’</strong> and do the final sense check and correct everything that needs to be corrected:</p>
+<ul class='none'>
+    <li>The column Outbound sales is looking at Partners value tab, Active Sales xxxx part – if there is -€, double-check in the Atvie Sales xxxx table if there is no sale (<strong>Remember!</strong> Sometimes the partners name can be wrong – in that case we correct the name and the number updates accordingly)</li>
+    <li>The column Inbound sales is looking at Partners value tab, Recieved Sales xxxx part - if there is -€, double-check in the Received Sales xxxx table if there is nothing received (Remember! Sometimes the partners name can be wrong – in that case we correct the name and the number updates accordingly)</li>
+    <li>Nb users column is a vlookup that checks the total number of CRM users per partner – if there is 0, double-check in the CRM Users tab if there are no active users (<strong>Remember!</strong> Sometimes the partners name can be wrong – in that case we correct the name and the number updates accordingly)</li>
+    <li>Recharge type – check if the partner should have full / half / none recharge as per the rules above and update accordingly</li>
+    <li>Mark in red all the partners that we will not recharge</li>
+</ul>
+    
+<p>6. At the end, we update the <strong>‘Budget infortmation’</strong> tab to have the final overview</p>
+
+<p>7. In January, go to this excel file and <strong>update</strong> the following information:</p>
+<ul class='none'>
+    <li>‘CRM Users data’ and ‘CRM Users xxxx’ tabs (with SF report)</li>
+    <li>‘Partners values' tabs (with Power BI report)</li>
+    <li>Final check on ‘All in xxxx’ tab</li>
+        <ul class='nested'>
+            <li>By January, we should also receive a recharger invoice from StepStone for SF users - based on the total amount, we might need to adjust the price per license (or to decide to absorb the cost if necessary); the balance 'The Network absorbs' should usually be 0€</li>
+        </ul>
+</ul>
+
+<br>
+    
+<h3>How to issue the yearly invoices?</h3>
+<ul class='none'>
+    <li>In finance@the-network.com, look up the last year 'Yearly Invoices' email with all instructions</li>
+    <li>Check and update the information (inlcuding information about new partners and company details, exceptions, etc.).</li>
+    <li>Attached the new file and send it to the accountant</li>
+    <li>Once the accountant has it ready, we check each individual invoice and send it to the partners</li>
+    <li>The partners have 30 days to pay</li>
+</ul>
+
+
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+        
+        
+</main>
+    
+ 
+<!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>   
+    
+    
+</body>
+
+
+
+
+
+
+</html>

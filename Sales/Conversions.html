@@ -31,22 +31,24 @@
 <!-- Main section --> 
     
 <main class="div">    
+    
 <br>
-<h2><span style="color: #8B6DEA;">Conversion</span></h2>
+    
+<h2>Conversion</h2>
 <p>Conversion used to be something offered only in exceptional cases, and it got more standardized during the COVID period. However, in 2023 it was decided that conversion would become a normal procedure, and a whole process (and Salesforce development) was created for it.</p>
 
 <br>
 
 <p>The new <strong>conversion procedure</strong> is as follows:</p>
-<ul>
+<ul class='none'>
     <li>Conversions are allowed as of 6 months of the contract (otherwise we need to ask for exception to sales)</li>
     <li>There is not limit to how many conversions can be done (but should be limited to once a month if possible)</li>
     <li>GFP conversion to local is always allowed</li>
-    <li>GFP conversion to GFP conversion is <u>only</u> allowed into a higher, EXISTING level. (For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can only be converted into local credits.)using the following rules</li>
+    <li>GFP conversion to GFP is <u>only</u> allowed into a higher, EXISTING level. (For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can only be converted into local credits.)using the following rules</li>
     <li>Always use the NET UNIT price of the product to be converted for the calculations</li>
     <li>Use <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion.xlsx</a> to figure out the credits that should be converted</li>
     <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be a GFP):</li>
-    <ul>
+    <ul class='nested'>
         <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header); check if the checkbox is correctly marked both in the IN and OUT PO</li>
         <li>The PO should be issued to The-Network.1</li>
         <li>The number of credits should be the number of credits being converted</li>
@@ -55,14 +57,14 @@
         <li>This is very important as credits in such a PO will not be counted into the ‘consumed’ field of the CP but into the newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
     </ul>
     <li>Create CP(s) for the converted product(s) and use the CP attribute ‘Conversion’</li>
-    <ul>
+    <ul class='nested'>
         <li>This product is totally independent to the original product - since you are using Net Unit Price for the conversion of the credits, the converted CP should never have Agency Commission and discount is applied only based on <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion calculator</a> </li>
         <li>This is important for reporting purposes</li>
         <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!!</li>
     </ul>
     <li>Issue a PO for the converted product(s) if necessary (in case of non-job listing products; for job listing products, PO will be created automatically upon import of the CP into FP)</li>
-    <li>As for changes to be done in FlashPost:</li>
-    <ul>
+    <li>As for changes to be done in <strong>FlashPost</strong>:</li>
+    <ul class='nested'>
         <li>Remove the converted GFP credits from the wallet via subtract</li>
         <li>Add the new local/GFP credits to the wallet via import</li>
         <li>Send a delegation email for the conversion (using 'conversion' as a delegation reason)</li>
@@ -79,13 +81,14 @@
 <br>
     
 <p>Here is an <strong>example case</strong>:</p>
-<ul>
+<ul class='none'>
     <li>A customer has a running contract for 12 months for GFP4 and 2-months CVDB for Hungary that was used up at the beginning of the contract</li>
     <li>On month 3 of the contract, the customer upsells another 2-months CVDB for Hungary – it is the same product, but that is fine as it is within the contract duration</li>
     <li>On month 6 of the contract, the customer decided to convert GFP4 credits to another 2-months CVDB for Hungary – it is the same product, but that is fine as it is within the contract duration</li>
     <li>On month 12 of the contract, the customer wants to convert credits from GFP4 to 10 local customized listings to DE with a duration of 12 months – that is fine as the credits were converted into different product</li>
     <li>On month 12 of the contract, the customer wants to convert credits from GFP4 to another 2-months CVDB for Hungary – that is NOT fine as it is the same product but the validity of the product would go OVER the contract end date</li>
 </ul>
+    
 <br>
     
     

@@ -1,0 +1,208 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+    
+
+<main class="div">
+    
+<br>
+    
+<h2>Under consumption passthrough</h2>
+<p>This process is to be done <strong>every 6 months</strong>.</p>
+<p>The finance part, which was done last in August 2022, it was for the contracts which ended until the end of December 2021. (Always contract end dates). A new report and POs to be created in September 2022 for the <strong>contracts end dates</strong> from 01/01/2022 to 30/06/2022, etc.</p>
+<p>The process should <strong>always</strong> consider the renewal 2 months period when partners have up to 2 months to renew an expired contract (a period we need to consider in case there are carryovers, extensions, etc. That is why we do not do it in June/January <strong>but rather in September/April.</strong></p>
+<p>To perfrom a successful under consumption procedure, you should follow <strong>these steps</strong>:</p>
+    
+<br>
+
+<h3><u>Sales Process</u></h3>
+<ul class="none">
+    <li>Go to the <a href="https://stepstonecore.sharepoint.com/sites/TheNetwork/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheNetwork%2FShared%20Documents%2FNETWORK%20TEAM%2FSALES%2FUnderconsumption&viewid=185cfc1b%2Dff3b%2D4a9f%2Db6d5%2D3228a9ed6439" target="_blank">Sharepoint</a> where all files for underconsumption are stored</li>
+    <li>Create a new folder for the period you are going to work on (i.e., 20220101 until 20220630)</li>        <li>To know which contracts are concerned for the given period, you need to run a SF report <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00O07000000JnKkEAK/view?queryScope=userFolders" target="_blank">‘Underconsumption 10% NW’</a></li>
+    <li>Change the <strong>date filters</strong>: contracts which expired from 01/01/20xx till 30/06/20xx / from 01/07/20xx till 31/12/20xx (as we are doing it every 6 months). <strong>Remember!</strong> The exercise should be only done min. 2 months after the filter end date (September / April).</li>
+    <li>Export the report into xls, details only</li>
+    <li>Tidy up the report:</li>
+        <ul class="nested">
+            <li>Save the report into the folder you just created and call it '10% underconsumption all 20xxxxxx to 20xxxxxx'</li>
+            <li>Move the column Partner in charge from the last place to the first place (column A)</li>
+            <li>Move 'Contract-Product' column after 'End date' column</li>
+            <li>Create an actual table from the data</li>
+            <li>Rename the columns to be tidier</li>
+            <li>Change the Net Price column in actual currency (€)</li>
+            <li>Rename the sheet into "Data"</li>
+        </ul>
+    <li>Add several new columns:</li>
+        <ul class="nested">
+            <li>Column M 'Net unit price'; you need to add a formula: Net price eur (L) / No of jobs (K) --> =[@[Net price EUR]]/[@[Nb Jobs/Product]]</li>
+            <li>Column O 'Under-consumed'; you need to add a formula: No of jobs (K) - Consumed (N) --> =[@[Nb Jobs/Product]]-[@Consumed]</li>
+            <li>Column P 'Adjustment'; we should only enter a negative number here</li>
+            <li>Column Q 'Adjustment reason'; we should state a reason why we entered a negative number into Column 0</li>
+            <li>Column R 'Under-consumed Final'; you need to add a formula: Under-consumed (O) + Adjustment (P) --> =[@[Under-Consumed]]+[@Adjustment] (the result should be negative)</li>
+            <li>Column S 'Passthrough %'; per default, we add 10% for everyone. However, we need to adjust the split if case of intra-StepStone consumption on <strong>LOCAL JOBS</strong> only (GFP is automatically 10%). By using filters on Partner in charge, we check StepStone Group countries (Careerjunction, Carribean jobs, Irishjobs, Jobs.ie, Jobs.lu, Nijobs, StSt AT, StSt BE, StSt DE, StSt NL, Tecoloco, TJ) and:</li>
+                <ul class='nested2'>
+                    <li>If they posted to a StepStone country, we change the split to 0%</li>
+                    <li>If they posted to a non-StepStone country, we keep the split 10%</li>
+                    <li>If they posted to The Network (translation), it is up to our judgement if we want to invoice them for this or not</li>
+                </ul>
+            <li>Column T 'The Network invoices'; you need to add a formula: (Under-consumed final (R)) * (Net Unit Price (M)) * (Passthrough % (S)) --> =[@[Under-consumed Final]]*([@[Net Unit Price]]*[@[Passthrough %]])</li>
+        </ul>
+    
+            <img src="resources_finance/Finance_P_2_1.png" width="1000" height="300" style="margin-left: 2.5%; margin-top: 0.5%;"> 
+        
+<br>
+<br>
+    
+    <li>Add two new sheets with pivot tables to show the final data clearly:</li>
+        <ul class="nested2">
+            <li>Overview partners - select Partner in charge in rows, and 'Sum of The Network invoices' in values</li>
+            <li>Overview customers - select 'Partner in charge' and 'Customer' in the rows, and 'Sum of Under-consumed Final' and 'Sum of The Network invoices' in values</li>
+        </ul>
+        
+<br>
+    
+    <li>Back in Salesforce, run another report <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00O07000000JnKuEAK/view?queryScope=userFolders" target="_blank">‘Negative POs by contract end date’</a> and change the filters of contract end date to the same dates: from 01/01/20xx till 30/06/20xx / from 01/07/20xx till 31/12/20xx</li>
+    <li>Export the report into xls, details only</li>
+    <li>Open this new report in a different window for better visualization</li>
+    <li>Using the report of negative POs, we match CPs with the 10% underconsumption report we just saved (we can use Vlookup function or do it manually)</li>
+    <li>When we find a match (there <strong>IS</strong> a negative PO for a CP that is on our 10% underconsumption report), we add this information into the column P (Adjustment) using a negative number and at the same time we add a reason to column Q (Adjustment reason), stating there was a negative PO (and we can add the negative PO reference). Any other records can be ignored as they are not in our 10% underconsumption report.</li>
+        
+<br>
+    
+    <li>Once more we go back to Salesforce and we run the last report <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00O07000000JnKzEAK/view?queryScope=userFolders" target="_blank">'Carry and roll overs for 10% underconsum'</a> and change the filters of contract creation date; for example starts from 01/11/20xx for the period 01/01/20xx till 30/06/20xx or 01/05/20xx for the period 01/07/20xx till 31/12/20xx (we look at CP creations dates as of the first day when the under consumed contracts could have expired and we go 2 months behind just in case there were some corrections)</li>
+    <li>We manually check each entry (we can skip a lot of entries as they have 'roll' in the comment used as a job title) but we mainly focus on GFPs</li>
+    <li>If we find something relevant, we again update column P (Adjustment) and column Q (Adjustment reason) as we did when checking the negative POs report</li>
+      
+<br>
+    
+    <li>Return back to the 10% underconsumption report and focus on the three comments fields ('Contract comment', 'Admin contract comments', and 'CP comments') to eliminate another potential CPs that should not be charged</li>
+    <li>If we find something relevant, we again update column P (Adjustment) and column Q (Adjustment reason) as we did when checking the negative POs and Carry and roll overs reports</li>
+    <li>After we do the necessary changes, we delete these threee colums ('Contract comment', 'Admin contract comments', and 'CP comments') as they will not be relevant for the partners</li>
+      
+<br>
+    
+    <li>We save a copy of the final report, and from the copy, we start generation reports for each partner</li>
+    <li>The moment we start working on a new report, we save it immediately - the name stays the same (remove COPY reference) but we include the partners name before the date (i.e. 10% underconsumption Appcast 20220101 to 20220630)</li>
+    <li>In each report, we keep the 'Customer overview' and 'Data' sheets and we delete the 'Overview partners' sheet</li>
+    <li>In the 'Data' sheet, we order the data by 'Partner in charge' and simply delete all unnecessary entries (i.e., if we are doing a report for Appcast, we keep Appcast records but delete everything else)
+    <li>Once we deleted all unnecessary data, we update the 'Customer overview' sheet which will show us the total that we should charge amount the partner for</li>
+      
+<br>
+    
+    <li>We then communicate the amount and the CPs to partners to have their feedback on potential corrections (negative POs, carry overs, etc.). All the communications are in the Sales mailbox - an old email should be reused, and we should simply change the dates and the amount to invoice and leave the rest of the info as it is</li>
+    <img src="resources_finance/Finance_P_2_3.jpg" width="1100" height="500" style="margin-top: 0.5%;">
+        
+<br>
+<br>
+    
+    <li>Create a new folder ‘Final’ - here, we should put all the partner reports once confirmed (if necessary, we first do the unnecessary in column 0 with a minus number and we update the pivot table)</li>
+</ul>
+        
+<br> 
+        
+<h3><u>CS Process</u></h3>
+<ul class='none'>
+    <li>After the deadline, once we are sure about the values, we start issuing the actual under-consumed POs in Salesforce</li>
+    <li>We go to the contract that was under-consumed and we check:</li>
+        <ul class='nested'>
+            <li>The Contract-Products to see which one is under-consumed; there might be more than one (keep this info in mind as you will need it when creating the WW for The-Network)</li>
+            <li>The Contract-Countries to see if the country The Network.1 is included</li>
+            <li>If yes, we check if there is WW linked to the contract and if yes, we need to edit it and tag the 'never expire' field</li>
+        </ul>
+    <li>If the C-C or the WW are not linked to the contract, we open the customer in a seperated tab and check if there is an existing WW for The-Network</li>
+        <ul class='nested'>
+            <li>If yes, we clone it (take the latest one) &amp; answer it as Done (in case there are several under-consumed CPs, we need to mark it as 'never expire' as well!!!)</li>
+            <li>If no, we create new Account-Country, The Network.1 (it does not matter what you put as info into centralization, etc.), and answer it as Done (in case there are several under-consumed CPs, we need to mark it as 'never expire' as well!!!)</li>
+        </ul>
+    <li><strong>Remember:</strong> In both cases, you should add a comment to the WW indicating this is for under-consumption excercise, ex: ‘Invoicing of 10% of under consumed credits for 01/01/2022 - 30/06/2022 exercise.’</li>
+
+<br>
+    
+    <li>We then go back to the under-consumed contract &amp; add The Network as Contract Country (unless it alraedy exists)</li>
+    <li><strong>Attention:</strong> In case the under-consumed contract was a SJNWW, we have to create a new contract, or we can use some other existing contract instead</li>
+    <li>We create a new C-P:</li>
+        <ul class="nested">
+            <li>Product - 'Under Consumption Pass-Through'</li>
+            <li>Country – The Network.1</li>
+            <li>Receiving partner: The-Network</li>
+            <li>Number of products: 1</li>
+            <li>Total value – taken from the partner final file (i.e., PO248595)</li>
+            <li>Add the following comment, ex: ‘Invoicing of 10% of under consumed credits for 01/01/2022 - 30/06/2022 exercise.’</li>
+        </ul>
+    <li>In case there were several under-consumed CPs under the same contract, we create a new CP for each entry</li>
+    <li>We create an ad-hoc PO (in case of several CPs, we can consolidate all of them in ONE single PO) with 1 month duration:</li>
+        <ul class='nested'>
+            <li>We mark a check box: Under-consumption PO</li>
+            <li>We add POLI with the same comment as per above</li>
+            <li>We submit and validate the PO</li>
+            <li>We open the OUT PO, and we mark a check box as ‘Under-consumption PO’ <strong>manually</strong></li>
+            <li>We validate the OUT PO</li>
+        </ul>
+        
+<br>
+
+    <li>Once we have all POs done and validated, then we need to check that all is correct and we check it in the following report <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00O07000000JnUBEA0/view?queryScope=userFolders" target="_blank" target="_blank">‘Underconsumption POs created check’</a></li>
+    <li>We match the total of this report with the total of POs in xls sheet (for IN_POs and OUT_POs)</li>
+    <li>Once these numbers match, then underconsumption process is complete and Finance team is informed, so that these new numbers could be included in the next closing</li>
+</ul>
+        
+<br>
+    
+<h3><u>Finance Process</u></h3>
+<ul class="none">
+    <li>The closing is done in the same way as always</li>
+    <li>After we have completed the closing file and all numbers are correct, we create a copy of the document and rename it to, for example ‘20220731_Underconsumption POs.xlsx’</li>
+    <li>We do the following modification:</li>
+        <ul class="nested">
+            <li>We hide ‘Stepstone to Network’, Network to StepStone’, Invoices NW to Partners’</li>
+            <li>We unhide a new sheet called: ‘Invoices Under Consumption’ + ‘Report’</li>
+            <li>In the pivot filters of the table, we choose Under Consumption PO: 1</li>
+            <li>In the pivot filters of the table, we choose Purchase  Order: record type: In</li>
+            <li>We re-refresh the table and save the file</li>
+        </ul>
+    <li>We send this file to our accountant, informing him that he needs to issue additional invoices to our partners. Once we receive them, we send them to our partners</li>
+    <li>Here is an example of email to the accountant:</li>
+    <img src="resources_finance/Finance_P_2_2.jpg" width="650" height="220" style="margin-top: 0.5%;">
+</ul>
+
+<br>
+<br>
+<br>
+    
+</main>
+
+    
+<!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>
+    
+    
+</body>
+
+</html>

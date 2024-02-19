@@ -1,0 +1,167 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+    
+
+<main class="div"> 
+    
+<br>
+    
+<h2>Closing Procedure</h2>
+<p>Closing is done on <strong>1st working day of every month</strong>, in the morning.</p>
+<p>To perfrom a successful closing, you should follow <strong>these steps</strong>:</p>
+    
+<br>
+    
+<h3><strong><u>1. Check POs</u></strong></h3>
+<ul class="none">
+    <li>Make sure that all IN POs are Validated or Deleted and that there aren’t any “Rejected POs”</li>
+    <li>In case of IN POs in status “To Validate”, please check with the CS person in charge. Probably he/she is waiting for confirmation or more information in order to validate or delete the PO</li>
+    <li>In case of “Rejected OUT POs” (IN or OUT), please check with the CS person in charge. All rejected POs have to be solved before the closing</li>
+    <li>If no solution is found before the closing, the last-moment solution is to inform all parts of the situation and proceed with the deletion of all POs affected. These POs will be issued again asap and invoiced in the next month. We need to be careful to always have the approval of both parts before any action is taken as our decisions will affect the partners’ forecast</li>
+    <li><strong>Important!</strong> Please use the report “POs to Validate or Delete” in “The Network” folder to check on all the POs as POs without a PO Line Item will not be showing on the first page of Salesforce to action</li>
+</ul>
+    
+<h3><strong><u>2. Create a Closing Folder in the Sharepoint</u></strong></h3>
+<ul class="none">
+    <li>In the <a href="https://stepstonecore.sharepoint.com/sites/TheNetwork/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheNetwork%2FShared%20Documents%2FNETWORK%20TEAM%2FFINANCE%2FINFO%20FOR%20NETWORK%20%26%20STEPSTONE%20INVOICES%5FCLOSING&viewid=185cfc1b%2Dff3b%2D4a9f%2Db6d5%2D3228a9ed6439" target="_blank">Sharepoint</a>, go to the current year, and create a new folder with the name of the month we are closing (ie “9 September 2022”)</li>
+</ul>
+    
+<h3><u>3. Create a report for SGO</u></h3>
+<ul class="none">
+    <li>To create a closing file for SGO you will need to set your locale in “French (Belgium)” before generating the report</li>
+        <ul class="nested">
+            <li>In Salesforce click on your name on the top right corner then “My Settings”.</li>
+            <li>Open the “Personal” tab on the left side then click on “Language &amp; Time Zone”. </li>
+            <li>As Locale select “French (Belgium)” then save</li>
+        </ul>
+    <li>Go to reports "IST Value Files report":</li>
+        <ul class="nested">
+            <li>In the filters choose “Last month”</li>
+            <li>Click export and select 'Details only' &amp; select the time range as last month and export the report as “Unicode (UTF8)” in excel format</li>       
+        </ul>
+    <li>Place the report in your newly created folder in the Sharepoint for last month and rename the file “Closing Info September 2019 StepStone Group”</li>
+    <li>Send the file to <a href=mailto:sgo@stepstone.com>SGO</a></li>
+    <li>FYI – Stepstone Group jobboards are: Appcast, CareerJunction, Caribbeanjobs, Irishjobs, Jobs.ie, Jobs.lu, NIJobs, StepStone AT, StepStone BE, StepStone DE, StepStone NL, Tecoloco &amp; Totaljobs
+</ul>
+
+<h3><u>4. Extract the closing file</u></h3>
+<ul class="none">
+    <li>Keep your Locale in “French (Belgium)”</li>
+    <li>Open the Reports tab in Salesforce and select the report called “Closing File” in “The Network” folder</li>
+    <li>Check it is indeed set for the month we are closing then export the report as “Unicode (UTF8)” in excel format</li>
+    <li>Place it in your newly created folder in the Sharepoint and rename it “Closing File September 2019”</li>
+</ul>
+
+<h3><u>5. Update the closing file</u></h3>
+<ul class="none">
+    <li>Go to the folder where the closing of the previous month has been done (ie: P:\_ The Network\NETWORK TEAM\FINANCE\INFO FOR NETWORK &amp; STEPSTONE INVOICES\2019\8 August 2019)</li>
+    <li>Copy the file “20190831_Invoice information” and paste it in the folder we are working on related to September</li>
+    <li>Rename it into last day of the month of closing (ie, 20190930_Invoice information)</li>
+    <li>Unhide the followiing sheets:</li>
+        <ul class="nested">
+            <li>StepStone to Network</li>
+            <li>Network to StepStone</li>
+            <li>Report</li>
+        </ul>
+    <li>Open the file “Closing file September”, Copy only the data (not the headers) and paste it in data (only number) into the last line of the “report” sheet of the Invoice information</li>
+    <li>Check column by column if the info matches</li>
+    <li>Check that the column “S” has “CN/INV” correctly (CN should have the negative amount)</li>
+    <li>In the month column write the date of the first of the month in question in format 01/09/2019. Repeat for the whole column of data you just pasted</li>
+    <li>Refresh of the closing sheets: go to sheet “invoices from Network to partners”. Click right mouse on a pivot table and click on “refresh”</li>
+    <li>Update the month in all the pivot tables of all the sheets we have</li>
+    <li>Check and make sure all the months are updated. One by one, take the time to do this. This is a very common thing to forget!</li>
+    <li>In the first sheet (“invoices from Network to partners”), check if all partners are “clicked” (selected) in the pivot table (check both invoice and credit note table)</li>
+    <li>Update format of column D (apply Format painter of column C)</li>
+    <li>Hide sheet “report”</li>
+</ul>
+    
+<h3><u>6. Get a confirmation from SGO that the figures are correct</u></h3>
+<h3><u>7. Send the closing file to our accountant</u></h3>
+<ul class="none">
+    <li>Take the last closing email we sent (in the Finance mailbox)</li>
+    <li>Update the info:</li>   
+        <ul class="nested">
+            <li>In the subject - update the month</li>
+            <li>In the body of the email - update the month</li>
+        </ul>
+    <li>Include the info related to the <strong>credit notes</strong> we need him to issue</li>
+    <li>You can find this information in the closing file, in sheet "Invoices from Network to partners". In the second part of this sheet (top right), there is a pivot table with the CN (credit notes):</li>
+        <ul class="nested">
+            <li>Copy the IN PO reference</li>
+            <li>Check the comments of the PO in SF</li>
+            <li>Select the original IN PO reference from the comment and check in which month it was issued</li>
+            <li>Go to the folder “INVOICES FROM NETWORK TO PARTNERS” in Network Team / Finance (the path to the folder is <a href="https://stepstonecore.sharepoint.com/sites/TheNetwork/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTheNetwork%2FShared%20Documents%2FNETWORK%20TEAM%2FFINANCE%2FINVOICES%20FROM%20NETWORK%20TO%20PARTNERS&viewid=185cfc1b%2Dff3b%2D4a9f%2Db6d5%2D3228a9ed6439" target="_blank">here</a>) and open the current year and the the folder of the month corresponding to the month the original PO was issued</li>
+            <li>Check the invoice reference</li>
+            <li>Go back to the email and under the partner name, include the amount of the PO in the CN pivot table and the invoice reference</li>
+</ul>
+    <li>Include the info related to the <strong>debit notes</strong> we need him to issue (usually only StSt countries and Turkey)</li>
+    <li>You can find this information in the closing file, in sheet "Invoices from Network to partners". In the second part of this sheet (down right), there is a pivot table with the DN (debit notes):</li>
+        <ul class="nested">
+            <li>Copy the OUT PO reference</li>
+            <li>Check and copy the invoice reference</li>
+            <li>Go back to the email and under the partner name, include the amount of the of the PO in the DN pivot table and the invoice reference</li>
+        </ul>
+
+<br>
+    
+    <li>See an example of the email to the accountant:</li>
+    <img src="resources_finance/Finance_P_1_1.jpg">
+    
+<br>
+<br>
+    
+    <li>Attach the 'Invoice information' file to the email (in the folder there are 3 documents - Closing file, Closing file SGO and Invoice Information)</li>
+    <li>Go through the check list one more time before sending the email to the accountant</li>
+</ul>
+
+<br>
+<br>
+<br>
+
+</main>
+    
+
+
+<!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>
+    
+    
+</body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">  
+    
+<br>
+    
+<h2>Converting a customer already existing in FP into a 'Self-Service' one</h2>   
+<p> You might come across a situation when the outbound partner needs to use the self-service feature but is not able to create the customer because that customer is already existing in FlashPost (it used to be FP customer in the past and/or they had postings to Appcast, Infojobs, or Daijob).</p>
+<p>In order to import the credits for such a customer, you need <strong>to choose the correct scenario and follow up the steps:</strong></p>
+
+<br> 
+
+<p class="important"><i><strong>IMPORTANT:</strong> If the existing FP customer has a running set-up (a running wallet for other countries than Infojobs, Appcast, and/or Daijob), they should keep using the set-up and they should NOT be switched into self-service customer. Any new purchase for such a customer should be treated via the normal set-up and delegation process.</i></p>
+<p class="important"><i><strong>IMPORTANT:</strong> We do describe the procedure for GFP credits below as well. However, GFP packages <strong>should use the regular set-up</strong> (FPRA or AFP) and only be used for self-service as an exception!</i></p>
+
+<br>
+    
+<h3><u>For SCENARIO A:</u></h3>
+<p>Customer has a running contract with FP set-up for Infojobs, Appcast, and/or Daijob and there is a <strong>new CP</strong> for job listings (local and /or GFP) within the <strong>SAME</strong> contract.
+<p>In such case, it is possible for the partner to import LOCAL credits for such customer; GFP credits have to be imported by admin</p>
+<p>Follow these steps:</p>
+    <ol class='noneol'>
+        <li>Switch the customer into 'Self-Service'</li>
+        <li>In case of <strong>local credits</strong>:</li>
+            <ul class="none">
+                <li>Switch the wallet type into 'Self-Service'</li>
+                <li>Ensure that the 'posting method' on the relevant CP(s) is 'Self-Service' (if more than 10 jobs, you need to change this as admin)</li>
+                <li>Ask the partner to import</li>                                    
+            </ul>
+        <li>In case of <strong>GFP credits:</strong> </li>
+            <ul class="none">
+                <li>Go to channels and verify what channels should be used:</li>
+                    <ul class="nested">
+                        <li> Delete those that the customer will not need using the delete button</li>
+                        <li> Change the rest into email override in case of a fully-automated partner</li>
+                        <li> Add new channels as email override if necessary</li>
+                    </ul>
+                <li> Change the wallet type into 'Salesforce imported and monthly PO enabled' so monthly PO can be created  </li>
+                <li> Go to wallet and import the CP(s) </li>
+            </ul>
+        <li>In case if there is  <strong>a mix of local and GFP credits</strong>, follow up the procedure for GFP credits + ask the partner to create the upfront PO for local jobs</li>
+    </ol>
+
+<br>
+    
+<h3><u>For SCENARIO B:</u></h3>
+<p>Customer has a running contract with FP set-up for Infojobs, Appcast, and/or Daijob and there is a <strong>partially used CP</strong> for job listings (local and/or GFP) within the <strong>SAME</strong> contract</p>
+<p>In such case it is <u>not</u> possible for the partner to import the credits for such customer</p>
+<p>Follow these steps:</p>
+<ol class='noneol'>
+    <li>Switch the customer into 'Self-Service'</li>
+    <li>In case of <strong>local credits:</strong></li>
+        <ul class='none'>
+            <li>Go to channels and verify what channels should be used:</li>
+                <ul class='nested'>
+                    <li>Delete those that the customer will not need using the delete button</li>
+                    <li>Change the rest into email override in case of a fully-automated partner</li>
+                    <li>Add new channels as email override if necessary</li>
+                </ul>
+            <li>Go to wallet and import the CP(s)</li>
+            <li>Change the wallet type from 'Salesforce imported' into 'Self-Service' so the wallet is ready for further import should there be an upsell on this contract</li>
+             <li>Ask the partner to create an upfront PO for the remaining credits</li>
+        </ul>
+    <li>In case of <strong>GFP credits:</strong></li>
+        <ul class='none'>
+            <li>Go to channels and verify what channels should be used:</li>
+                <ul class="nested">
+                    <li>Delete those that the customer will not need using the delete button</li>
+                    <li>Change the rest into email override in case of a fully-automated partner</li>
+                    <li>Add new channels as email override if necessary</li>
+                </ul>
+            <li>Go to wallet and import the CP(s)</li>
+            <li>Change the wallet type into 'Salesforce imported and monthly PO enabled' so monthly PO can be created</li>
+        </ul>
+    <li>In case if there is  <strong>a mix of local and GFP credits</strong>, follow up the procedure for GFP credits + ask the partner to create the upfront PO for local jobs</li>
+</ol>
+    
+<br>
+    
+<h3><u>For SCENARIO C:</u></h3>
+<p>The customer exists in FlashPost but doesn't have any active contract in FlashPost (i.e. no active wallets) and they have signed a new contract (for local and/or GFP listings) which wasn't consumed (even partially) yet.</p>
+<p>In such case, it is possible for the partner to import LOCAL credits for such customer; GFP credits have to be imported by admin.</p>
+<p>Follow these steps:</p>
+<ol class='noneol'>
+    <li>Switch the customer into 'self-service'</li>
+    <li>In case of <strong>local credits:</strong></li>
+        <ul class='none'>
+            <li>Ensure that the 'posting method' on the relevant CP(s) is 'Self-Service' (if more than 10 jobs, you need to change this as admin)</li>
+            <li>Ask the partner to import</li>
+        </ul>
+    <li>In case of <strong>GFP credits</strong>:</li>
+        <ul class="none">
+            <li>Go to channels and verify what channels should be used:</li>
+                <ul class="nested">
+                    <li>Delete those that the customer will not need using the delete button</li>
+                    <li>Change the rest into email override in case of a fully-automated partner</li>
+                    <li>Add new channels as email override if necessary</li>
+                </ul>  
+            <li>Go to wallet and import the CP(s)</li>
+            <li>The wallet type should be 'Salesforce imported and monthly PO enabled' so monthly PO can be created</li>
+        </ul>
+    <li>In case if there is  <strong>a mix of local and GFP credits</strong>, follow up the procedure for GFP credits + ask the partner to create the upfront PO for local jobs</li>
+    <li>In case if there is  <strong>a mix of local and GFP credits</strong>, follow up the procedure for GFP credits + ask the partner to create the upfront PO for local jobs</li>
+</ol>
+    
+<br>
+              
+<h3><u>For SCENARIO D:</u></h3>
+<p>The customer exists in FlashPost but doesn't have any active contract in FlashPost (i.e. no active wallets) and they have signed a contract (for local and/or GFP listings) which was already prtially consumed</p>
+<p>In such case, it is  <u>not</u> possible for the partner to import the credits (for the artially used CP) for such customer</p>
+<p>Follow these steps:</p>
+<ol class='noneol'>
+    <li>Switch the customer into 'Self-Service'</li>
+    <li>In case of <strong>local credits:</strong></li>
+        <ul class="none">
+            <li>Go to channels and verify what channels should be used:</li>
+                <ul class="nested">
+                    <li>Delete those that the customer will not need using the delete button</li>
+                    <li>Change the rest into email override in case of a fully-automated partner</li>
+                    <li>Add new channels as email override if necessary</li>
+                </ul>
+            <li>Go to wallet and import the CP(s)</li>
+            <li>Change the wallet type from 'Salesforce imported' into 'Self-Service' so the wallet is ready for further import should there be an upsell on this contract</li>
+            <li>Ask the partner to create an upfront PO for the remaining credits</li>
+        </ul>
+    <li>In case of <strong>GFP credits:</strong></li>
+        <ul class='none'>
+            <li>Go to channels and verify what channels should be used:</li>
+                <ul class='nested'>
+                    <li>Delete those that the customer will not need using the delete button</li>
+                    <li>Change the rest into email override in case of a fully-automated partner</li>
+                    <li>Add new channels as email override if necessary</li>
+                </ul>
+            <li>Go to wallet and import the CP(s)</li>
+            <li>The wallet type should be 'Salesforce imported and monthly PO enabled' so monthly PO can be created </li>
+        </ul>
+    <li>In case if there is  <strong>a mix of local and GFP credits</strong>, follow up <a href="../Self-Service_procedures/New_SeSe_customer.html" target="_blank">the procedure</a> for GFP credits + ask the partner to create the upfront PO for local jobs</li>
+</ol>
+
+    <br>
+    <br>
+    
+
+</main>
+    
+
+ <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>    
+    
+    
+</body>
+
+
+
+
+
+
+</html>
