@@ -33,52 +33,98 @@
 <main class="div">    
 <br>
 <h2>Modification of WW in case of (de)centralization</h2>    
-<p>For now, we don’t have an automated solution for situation when a WW changes from centralized to decentralized or vice versa.</p> 
-<p>If such a situation arises, <strong>follow these steps:</strong></p>    
-<ol class='noneol'>
-    <li>Single valid WW (or a handful of valid WWs), no protection</li>
-        <ul class="none">
-            <li>Ensure that you have a confirmation from the inbound partner that the change can be done</li>
-            <li>Edit the WW manually</li>
-            <li>Change the info about (de)centralization</li>
+<p>As of 14/02/2014, Salesforce offers you an automated solution for occassions when a WW changes from centralized to decentralized and vice versa.</p> 
+<p>When a value of a local contract (or proposal) is declared by a receiving partner, the system will automatically adjust the 'Value to Protect' depending on what was entered into the 'Centralization' field. If centralization says 'Yes', then the 'Value to Protect' will reflect the value of the local contract declared by the receiving partner. If centralization is 'No', then the 'Value to Protect' will stay on 0€, ignoring the value of the local contract declared by the receiving partner. This value will though still be showned in a new field called 'Value Declared by Partner'.</p>
+<p>Please keep in mind that this applies only for so called <strong>'new WWs'</strong>! You can recognize a 'new WW' fairly simply - it has tagged 'New WW' checkbox (which you can find at the bottom of the page). These should be all WWs created after 14/02/2014 (including WWs that are cloned or mass cloned).</p>
+<p>For so called <strong>'old WWs'</strong> (all WWs created before 14/02/2014 &amp; WWs created via a renewal if the original WW is 'old'), this automatic development does NOT apply and no matter the info in the 'Centralization' field, the WW will ALWAYS have 'Value to Protect' if any entered. Whenever you come across such a WW, you can easily tag it as 'new' which will assure that this automated solution will </p>
+    
+<br>
+    
+<p>If the selling partner needs to edit the information in the WW (for example to change it from centralization yes to centralization no), there are two ways to do this, depending on the WW state:</p>
+<ul class='none'>
+    <li>The WW is valid (it is not expired and it is not yet linked to a contract - in this case, you advice the selling partner to use a new <a href="SF_Edit_WW_functionality.html">'Edit WW' functionality</a> which will allow the selling partner to change whatever information is needed and resend the WW to the receiving partner</li>
+    <li>The WW is linked to a running contract - in this case, the WW can ONLY be edited by an admin and it has to be done manually! To do so, you should follow the below steps:</li>
+    <ul class='nested'>
+        <li><strong>Centralization from YES to NO</strong></li>
+        <ul class='nested2'>
+            <li>Make sure the receiving partner is aware of the change</li>
+            <li>Correct the centralization field from Yes to No</li>
+            <li>If the WW is not marked as 'new WW', mark it</li>
             <li>Put a comment with TNW amendments</li>
-            <li>Save</li>
+            <li>Doule-check that the value declared by the receiving partner in the WW product (if any) is correctly displayed as per below:</li>
+            <ul class='nested3'>
+                <li>Field 'Value to Protect' should be on 0€</li>
+                <li>Field 'Value Declared by Partner' should display the value entered in the WW product(s)</li>
+            </ul>
             <li>Attach the related email</li>
         </ul>
-    
-    <br>
-    
-    <li>Single valid WW (or a handful of valid WWs), protection</li>
-        <ul class="none">
-            <li>Ensure that you have a confirmation from the inbound partner that the change can be done</li>
-            <li>Edit the WW manually</li>
-            <li>Change the status into ‘To Do’</li>
-            <li>Change the info about (de)centralization</li>
+        <li><strong>Centralization from NO to YES</strong></li>
+        <ul class='nested2'>
+            <li>Make sure the receiving partner is aware of the change</li>
+            <li>Edit the WW and change the status into 'To Do'</li>
+            <li>Correct the centralization field from No to Yes</li>
+            <li>If the WW is not marked as 'new WW', mark it</li>
             <li>Put a comment with TNW amendments</li>
-            <li>Save</li>
-            <li>Go to the WW product and change the value in the WW product into 0.01€ (you can keep the original value in the comment field); this only applies for cases when the WW is changed from centralized to decentralized</li>
-            <li>Put the WW back ‘Waiting for approval’</li>
+            <li>In case there was no WW product and were instructed to add it (the receiving partner did not fill it in as the centralization was no), you also need to:</li>
+            <ul class='nested3'>
+                <li>Tag the activity check box and select the type of the local deal (contract or proposal)</li>
+                <li>Add the WW product in question</li>
+            </ul>
+            <li>Double-check that the value declared by the receiving partner in the WW product (if any) is correctly displayed as per below:</li>
+            <ul class='nested3'>
+                <li>Both fields 'Value to Protect' and 'Value Declared by Partner' should display the value entered in the WW product(s)</li>
+            </ul>
+            <li>Submit the WW for approval</li>
+            <li>Approve it</li>
             <li>Attach the related email</li>
         </ul>
-    
-    <br>
-    
-    <li>More valid WWs</li>
-       <ul class="none">
-            <li>Mass clone the WWs</li>
-       </ul>
-    
-    <br>
-    
-    <li>Expired WW(s)</li>
-       <ul class="none">
-            <li>Clone the WW (mass clone the WWs) </li>
-       </ul>
-</ol>
+    </ul>
+</ul>
+        
+<br>
 
+<p>If a selling partner asks to edit an <strong>expired WW</strong>, you should tell them this is NOT possible. The way to proceed is for the selling partner to clone or mass clone the WW(s) so the receiving partners can answer them anew. Once the cloned WW is created, the selling partner can use the new <a href="SF_Edit_WW_functionality.html">'Edit WW' functionality</a> to update whatever information is needed as the WW is cloned with the information from the original WW.</p> 
+<p>Please remember that cloned (or mass cloned) WW will be always marked as 'new' as the receiving partner needs to answer them anew.</p>
 
 <br>
-<br>    
+    
+<p>Here is an ilustration of 'old' vs 'new' WW:</p>
+
+<table class='old_new_WW'>
+<thead>
+<tr>
+  <th>Old WW</th>
+  <th>New WW</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+  <td>Created before 14/02</td>
+  <td>Created on or after 14/02</td>
+</tr>
+<tr>
+    <td>Renewed
+    <br>
+    (only if the original WW not tagged as new)</td>
+    <td>Cloned OR Mass cloned
+    <br>
+    (even if the original WW not tagged as new)</td>
+    
+</tr>
+<tr>
+    <td><b style="color: black">WHY?</b> Does not have to be answered</td>
+    <td><b style="color: black">WHY?</b> Partner needs to answer</td>
+</tr>
+</tbody>
+</table>
+    
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br> 
     
     
 
