@@ -194,25 +194,55 @@ strong {
     list-style:initial;
     color: white;
     line-height: 180%;
-    list-style-type: circle;
+    list-style-type: square;
 }
 
 .nested2 {
     list-style:initial;
     color: white;
     line-height: 180%;
-    list-style-type: square;
+    list-style-type: circle;
 }
 
-.nested3 {
+/* .nested3 {
     list-style:initial;
     color: white;
     line-height: 180%;
-    list-style-type: disc;
+    list-style-type: disc; 
+}
+*/ 
+
+.nested3 {
+    list-style: none;
+    padding-left: 15;
 }
 
+.nested3 li:before {
+    content: '✓ ';
+    color: #FFF;
+    line-height: 180%;
+}
 
-        
+/* Tables */ 
+
+.old_new_WW {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.old_new_WW th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.old_new_WW th {
+    background-color: rgb(0, 40, 95);
+}
+
+.old_new_ww td {
+    background-color: rgb(113, 139, 175);
+}
 
 /* Important feature within procedures */
 
