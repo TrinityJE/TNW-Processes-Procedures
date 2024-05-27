@@ -127,22 +127,16 @@
     <li>After the deadline, once we are sure about the values, we start issuing the actual under-consumed POs in Salesforce</li>
     <li>We go to the contract that was under-consumed and we check:</li>
         <ul class='nested'>
-            <li>The Contract-Products to see which one is under-consumed; there might be more than one (keep this info in mind as you will need it when creating the WW for The-Network)</li>
+            <li>The Contract-Products to see which one is under-consumed; there might be more than one (keep this info in mind as you should create only 1 PO for all underconsumed products per contract)</li>
             <li>The Contract-Countries to see if the country The Network.1 is included</li>
-            <li>If yes, we check if there is WW linked to the contract and if yes, we need to edit it and tag the 'never expire' field</li>
+            <li>If no, we check the customer account and see if the country The Network.1 is there:</li>
+                <ul>
+                    <li>If yes, we return to the contract and add The Network.1 as a Contract-Country</li>
+                    <li>If no, we have to create it as a new account country (Remember! There is no WW created anymore, so it does not matter what info you input into the WW info) and then, back in the contract we add The Network.1 as a Contract-Country)</li>
+                </ul>
         </ul>
-    <li>If the C-C or the WW are not linked to the contract, we open the customer in a seperated tab and check if there is an existing WW for The-Network</li>
-        <ul class='nested'>
-            <li>If yes, we clone it (take the latest one) &amp; answer it as Done (in case there are several under-consumed CPs, we need to mark it as 'never expire' as well!!!)</li>
-            <li>If no, we create new Account-Country, The Network.1 (it does not matter what you put as info into centralization, etc.), and answer it as Done (in case there are several under-consumed CPs, we need to mark it as 'never expire' as well!!!)</li>
-        </ul>
-    <li><strong>Remember:</strong> In both cases, you should add a comment to the WW indicating this is for under-consumption excercise, ex: ‘Invoicing of 10% of under consumed credits for 01/01/2022 - 30/06/2022 exercise.’</li>
-
-<br>
-    
-    <li>We then go back to the under-consumed contract &amp; add The Network as Contract Country (unless it alraedy exists)</li>
     <li><strong>Attention:</strong> In case the under-consumed contract was a SJNWW, we have to create a new contract, or we can use some other existing contract instead</li>
-    <li>We create a new C-P:</li>
+    <li>The next step is to create a new C-P:</li>
         <ul class="nested">
             <li>Product - 'Under Consumption Pass-Through'</li>
             <li>Country – The Network.1</li>
