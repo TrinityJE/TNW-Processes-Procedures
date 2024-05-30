@@ -51,18 +51,35 @@
 <br>
 
 <h3>Carry over</h3>
-<p>In case a contract is about to end and the customer has unused inventory, carry-over of credits could be allowed for the 20% of the remaining net credits under the condition that the customer renews with a contract value equal or greater than the one about to expire.</p>
-<p>To process Carry Over in Salesforce, follow <strong>this procedure:</strong></p>
+<p>In case a contract is about to end and the customer has unused inventory, they can carry over these credits into a new contract.</p>
+<p>In case of a <strong>local contract</strong>, there is no limitation on % of credits to carry over; this is established by the receiving partner and what they allow the customer to do.</p>
+<p>To process a carry-over from a local contract, you should follow <strong>this procedure:</strong></p>    
 <ul class='none'>
-    <li>Carry over product(s) should be created by admins only (it will not be possible for partners once we are using CPQ contract creation for everyone anyway)</li>
-    <li>Create CP(s) for the carry over credit(s) and use the CP attribute ‘Carry Over’</li>
-    <li>This will prompt you to fill in a new field – Original contract-product reference</li>
-    <li>Fill in this field by including the original CPs reference number so we can track with CP(s) is being carried over</li>
-</ul>
+    <li>In the new contract, if the product is the SAME as for the credits to be carried over (i.e. local standard jobs for Hungary both in the original and the new contract), there is no need to create a separate CP for these carried-over credits</li>
+    <ul class='nested'>
+        <li>You should simply add them to the CP of the new product under the ‘Carry Over (for local credits)’ field in the FlashPost &amp; CPQ information</li>
+    </ul>
+    <img src="Images/carry_over.png" alt="carry-over">
+
+<br> 
     
+    <li>If the product is NOT the same, though, you will have to create a separate CP for these carried-over credits</li>
+    <ul>
+        <li>You will need to fill the ‘Original contract-product reference’ with the CP reference number from the contract the credits are being carried over</li>
+        <li>The unit price should be 0€ (as they were already paid off in the original contract with an upfront PO)</li>
+    </ul>
+</ul>
+
 <br>
     
-<p>In case a customer has already carried over credits in the previous contract, the 20% will be calculated from the net remaining credits. This means that the credits that were already carried over will be subtracted from the number of credits remaining, before calculating the 20% that can be carried over.<strong>It can be difficult to follow up, but, yes, its possible.</strong></p>
+<p>In case of a <strong>GFP contract</strong>, they are allowed to carry over 20% of the remaining net credits under the condition that the customer renews with a contract value equal to or greater than the one about to expire. 
+<p>To process a carry-over from a GFP contract, you should follow <strong>this procedure:</strong></p>
+<ul class='none'>
+    <li>In the new contract, create a separate CP(s) for the carried-over credit(s) and use the CP attribute ‘Carry Over’</li>
+    <li>You will need to fill the ‘Original contract-product reference’ with the CP reference number from the contract the credits are being carried over</li>
+    <li>The unit price of the carried-over credits should be the unit price of the original CP from which the credits are being carried over </li>
+</ul>
+<p>In case a customer has already carried over GFP credits in the previous contract, the 20% will be calculated from the net remaining credits. This means that the credits that were already carried over will be subtracted from the number of credits remaining, before calculating the 20% that can be carried over.<strong>It can be difficult to follow up, but, yes, its possible.</strong></p>
 <p>Example:</p>
 <p><strong>1<sup>st</sup> year</strong></p>
 <ul class='none'>    
