@@ -56,8 +56,8 @@
         </ul>
     <li>Add several new columns:</li>
         <ul class="nested">
-            <li>Column M 'Net unit price'; you need to add a formula: Net price eur (L) / No of jobs (K) --> =[@[Net price EUR]]/[@[Nb Jobs/Product]]</li>
-            <li>Column O 'Under-consumed'; you need to add a formula: No of jobs (K) - Consumed (N) --> =[@[Nb Jobs/Product]]-[@Consumed]</li>
+            <li>Column L 'Net unit price'; you need to add a formula: Net price eur (K) / No of jobs (J) --> =[@[Net price EUR]]/[@[Nb Jobs/Product]]</li>
+            <li>Column O 'Under-consumed'; you need to add a formula: No of jobs (J) - Consumed (M) - Converted (N) --> =[@[Nb Jobs/Product]]-[@Consumed]-[@Converted]</li>
             <li>Column P 'Adjustment'; we should only enter a negative number here</li>
             <li>Column Q 'Adjustment reason'; we should state a reason why we entered a negative number into Column 0</li>
             <li>Column R 'Under-consumed Final'; you need to add a formula: Under-consumed (O) + Adjustment (P) --> =[@[Under-Consumed]]+[@Adjustment] (the result should be negative)</li>
@@ -67,7 +67,7 @@
                     <li>If they posted to a non-StepStone country, we keep the split 10%</li>
                     <li>If they posted to The Network (translation), it is up to our judgement if we want to invoice them for this or not</li>
                 </ul>
-            <li>Column T 'The Network invoices'; you need to add a formula: (Under-consumed final (R)) * (Net Unit Price (M)) * (Passthrough % (S)) --> =[@[Under-consumed Final]]*([@[Net Unit Price]]*[@[Passthrough %]])</li>
+            <li>Column T 'The Network invoices'; you need to add a formula: (Under-consumed final (R)) * (Net Unit Price (L)) * (Passthrough % (S)) --> =[@[Under-consumed Final]]*([@[Net Unit Price]]*[@[Passthrough %]])</li>
         </ul>
     
             <img src="resources_finance/Finance_P_2_1.png" width="1000" height="300" style="margin-left: 2.5%; margin-top: 0.5%;"> 
