@@ -50,18 +50,24 @@
     <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be a GFP):</li>
     <ul class='nested'>
         <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header); check if the checkbox is correctly marked both in the IN and OUT PO</li>
+            <ul class="nested1">
+                <li>This is very important as credits in such a PO will not be counted into the ‘consumed’ field of the CP but into the newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
+            </ul>
         <li>The PO should be issued to The-Network.1</li>
         <li>The number of credits should be the number of credits being converted</li>
         <li>Once OUT PO is created, change the ‘You can invoice us €’ field to 0€</li>
         <li>Check that the splits are 0/0/0</li>
-        <li>This is very important as credits in such a PO will not be counted into the ‘consumed’ field of the CP but into the newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
+        
     </ul>
-    <li>Create CP(s) for the converted product(s) and use the CP attribute ‘Conversion’</li>
+    <li>Create CP(s) for the converted product(s):</li>
     <ul class='nested'>
-        <li>This product is totally independent to the original product - since you are using Net Unit Price for the conversion of the credits, the converted CP should never have Agency Commission and discount is applied only based on <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion calculator</a> </li>
-        <li>This is important for reporting purposes</li>
+        <li>Add the CP attribute 'Conversion - this is important for reporting purposes</li>
         <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!!</li>
+        <li>As for the unit price, this product is totally independent to the original product - since you are using Net Unit Price for the conversion of the credits, the converted CP should never have Agency Commission and discount is applied only based on <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion calculator</a> </li>
+        <li><mark>IMPORTANT!</mark> You should always use the price indicated in the calculated field! If the calculation in column G give you a discount lower than 7% (10% in case the total value is more than 7,500€), you can insert the provided price + the indicated discount into the CP. In case, for whatever reason, the selling partner does not wish to give a discount, move to column K and use <strong>the exact Total Net Value price</strong> to input into the CP <strong><u>EVEN IF</u></strong> it is higher than what the catalog price says. We need to ensure we cover our share, and that the numbers are matching.</li>
+        <img src="Images/Conversion.png" alt="Conversion calculator">
     </ul>
+    <br>
     <li>Issue a PO for the converted product(s) if necessary (in case of non-job listing products; for job listing products, PO will be created automatically upon import of the CP into FP)</li>
     <li>As for changes to be done in <strong>FlashPost</strong>:</li>
     <ul class='nested'>
