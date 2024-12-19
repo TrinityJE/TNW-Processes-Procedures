@@ -39,18 +39,20 @@
 <p>The most important points connected to yearly invoices are:</p>
 <ul class="none">
     <li>Issued in the first 2 months of the given year (Jan - Feb)</li>
-    <li>They comprise of Salesforce license fee + Marketing Budget (partnership fee)</li>
-    <li>If partner's active and received sales are less than 30k, they are recharged half of SF yearly fee</li>
+    <li>They comprise of Salesforce license fee + Marketing Budget + Partnership fee (when applicable, see below))</li>
+    <ul class="nested">
+        <li>StSt Group, JobCloud and Figaro are our <strong>shareholders</strong>, paying higher partnership fee + shareholder fee, as per details in our T&amp;Cs:</li>
+        <ol class='noneol'>
+        <li>StepStone Group EMEA: 185.000 €</li>
+        <li>Figaro Classifieds A.S.: 105.000 €</li>
+        <li>Jobcloud AG: 105.000 €</li>
+        </ol>
+    </ul>
+    <li>If partner's active and received sales are less than 20k, they are recharged half of SF yearly fee</li>
     <li>In our T&amp;Cs:
         <p><I>Partner shall pay 950 USD per User License per year for the use of the CRM. Each Partner purchases at least one User License. That price can evolve in time because of salesforce pricing changes or exchange rate evolution between Euros and USD. The yearly fee shall be invoiced upfront at the beginning of each year and shall be payable within 30 days.</I></p></li>
     <li>Partnership fee is 750 EUR in the 1st year and 1500 EUR 2nd year and after, as per details in our T&amp;Cs:
         <p><I>Year one of Partnership: 750 €, if a Partners joins the Network before July, the Network will invoice 750 € during that year. If a Partner joins the Network in or after July, the Network will invoice these 750 € in January of the following year.</I></p></li>
-    <li>StSt Group, JobCloud and Figaro are our <strong>shareholders</strong>, paying higher partnership fee + shareholder fee, as per details in our T&amp;Cs:</li>
-    <ol class='noneol'>
-        <li>StepStone Group EMEA: 185.000 €</li>
-        <li>Figaro Classifieds A.S.: 105.000 €</li>
-        <li>Jobcloud AG: 105.000 €</li>
-    </ol>
 </ul>
 
 <br>
@@ -66,7 +68,7 @@
 <p>2. For the <strong>pre-liminary check</strong>, open the file and work with the following tabs:</p>
 <ul class='none'>
     <li>Budget information = a list of partners with the final invoice amount to invoice / what we are invoicing them for / notes if we should invoice them or not, if we should include some fees or not, etc. There are few partners we do not invoice as they invoiced us for less than 5K in the previous year; they could leave the alliance (usually marked in yellow) </li>
-    <li>CRM Users data = info about SF users</li>
+    <li>CRM Users data (hidden) = info about SF users</li>
     <li>CRM Users xxxx = final data on SF users + calculation on the number of SF users per partner</li>
     <li>All in xxxx = the main tab where we are gathering all the info and doing the actual calculations</li>
     <ul class='nested'>
@@ -87,7 +89,7 @@
         <li>For columns H (last login) and I (create date), change the format to short date</li>
     </ul>
     <li>Sense check that each entry has a correct company name (correct if you see some discrepancies and synchronize the naming)</li>
-    <li>Once the data in the tab ‘CRM Users data’ is correct, we simply take it and copy paste it into the tab ‘CRM Users xxxx’ – careful when coping, double check that NO old data stayed in</li>
+    <li>Once the data in the tab ‘CRM Users data’ is correct, we simply take it and copy paste it into the tab ‘CRM Users xxxx’ – careful when coping (you have to copy the formula), double check that NO old data stayed in</li>
     <li>In the tab 'CRM Users xxx', refresh the pivot table</li>
 </ul>
 
