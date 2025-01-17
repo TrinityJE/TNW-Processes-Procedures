@@ -47,6 +47,11 @@
     <li>GFP conversion to GFP is <u>only</u> allowed into a higher, EXISTING level. (For example, credits of L1 standard can be converted into L1 customized, and L2/3/4 standard or customized; L4 customized, however, can only be converted into local credits.)using the following rules</li>
     <li>Always use the NET UNIT price of the product to be converted for the calculations</li>
     <li>Use <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B7F089261-11BF-4E3F-B8FE-78C1D352C3AF%7D&file=Conversion%20master.xlsx&action=default&mobileredirect=true" target="_blank">Conversion master.xlsx</a> to figure out the credits that should be converted</li>
+    <li>If you have several products for the conversion (e.i., the seller is asking to exchange credits for several CVDBs in different countries), insert the products one by one to calculate how many GFP credits have to be used for the whole conversion</li>
+    <li>Once you know how many credits are needed in total, you can start creating CPs and issuing POs:</li>
+    
+    <br>
+    
     <li>Issue an ADMINISTRATIVE PO from the product that is being converted (should always be a GFP):</li>
     <ul class='nested'>
         <li>Mark the PO as ‘Conversion PO’ (under the check box for ‘Negative PO’ when creating the PO header); check if the checkbox is correctly marked both in the IN and OUT PO</li>
@@ -54,18 +59,39 @@
                 <li>This is very important as credits in such a PO will not be counted into the ‘consumed’ field of the CP but into the newly created ‘converted’ field so we can distinguish the number of consumed credits vs number of converted credits!</li>
             </ul>
         <li>The PO should be issued to The-Network.1</li>
-        <li>The number of credits should be the number of credits being converted</li>
+        <li>The number of credits should be the TOTAL number of credits being converted</li>
         <li>Once OUT PO is created, change the ‘You can invoice us €’ field to 0€</li>
         <li>Check that the splits are 0/0/0</li>
-        
     </ul>
+    
+    <br>
+    
     <li>Create CP(s) for the converted product(s):</li>
     <ul class='nested'>
         <li>Add the CP attribute 'Conversion - this is important for reporting purposes</li>
         <li>By using this attribute, the total gross &amp; net amount of the CP will NOT add up to the total gross &amp; net amount of the contract!!!</li>
-        <li>As for the unit price, this product is totally independent to the original product - since you are using Net Unit Price for the conversion of the credits, the converted CP should never have Agency Commission and discount is applied only based on <a href="https://stepstonecore.sharepoint.com/:x:/r/sites/TheNetwork/_layouts/15/Doc.aspx?sourcedoc=%7B5A7E7CBC-3E32-47C1-A3F6-B51BABEED346%7D&file=Conversion.xlsx&wdLOR=c3BFFFD0C-BBDB-451D-8429-2CBDE8A9CB9E&action=default&mobileredirect=true" target="_blank">Conversion calculator</a> </li>
-        <li><mark>IMPORTANT!</mark> You should always use the price indicated in the calculated field! If the calculation in column G give you a discount lower than 7% (10% in case the total value is more than 7,500€), you can insert the provided price + the indicated discount into the CP. In case, for whatever reason, the selling partner does not wish to give a discount, move to column K and use <strong>the exact Total Net Value price</strong> to input into the CP <strong><u>EVEN IF</u></strong> it is higher than what the catalog price says. We need to ensure we cover our share, and that the numbers are matching.</li>
-        <img src="Images/Conversion.png" alt="Conversion calculator">
+        <li><mark>IMPORTANT!</mark> You should always use the price indicated in the calculated field! There are three options:
+        <ul class="nested2">
+            <li>The calculation in column G shows a discount. If the discount is lower than 7% (10% in case the total value is more than 7.500 EUR), you should insert the local catalog price from cell C9 + the discount from cell G12.</li>  
+            <li>The calculation in column G does not show any discount and the price in cell G10 is higher than the local catalog price. In this case, use <strong>the exact Total Net Value price</strong> from cell G10 to input it to the CP <strong><u>EVEN IF</u></strong> it is higher than what the catalog price says. We need to ensure we cover our share, and that the numbers are matching.</li>
+            <li>The calculation in colum G shows a discount, but the discount is higher than our rules (more than 7% for less than 7.500 EUR or more than 10% for more than 7.500 EUR) or the selling partner explicitely ask you NOT to include any discount. In this case, use <strong>the exact Total Net Value price</strong> from cell K10 to input it to the CP <strong><u>EVEN IF</u></strong> it is higher than what the catolog price says. We need to ensure we cover our share, and that the numbers are matching.</li>
+        </ul>
+        <li>Should you encounter a case that does not correspond to any of the options above, contact Giorgia for support.</li>
+        
+        <br>
+            
+        <img src="Images/Option1.png" alt="Option 1" width= "800px" height="300px">
+        
+        <br>
+        <br>
+        
+        <img src="Images/Option2.png" alt="Option 2" width= "550px" height="300px">
+        
+        <br>
+        <br>
+        
+        <img src="Images/Option3.png" alt="Option 3" width= "700px" height="300px">
+        
     </ul>
     <br>
     <li>Issue a PO for the converted product(s) if necessary (in case of non-job listing products; for job listing products, PO will be created automatically upon import of the CP into FP)</li>
