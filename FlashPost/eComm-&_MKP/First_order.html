@@ -36,14 +36,17 @@
     
 <h2>eCommerce - First Order</h2>
 <h3>Leads process</h3>
-    <p>Leads are for now sent by <a href="mailto:sales@the-network.com">sales@the-network.com</a>.</p>
-<p>Possible scenarios:</p>
+<p>When we receive a Slack notification about a new order, there are two options:</p>
 <ul class="none">
-    <li>Payment sucessess --> CS to post job &amp; afterwards to send a lead</li>
-    <li>Job written but did not try to pay (dropped) --> CS to send it as a lead</li>
-    <li>Job written and did try to pay, but payment failed --> CS to reach out to the customer and try to help them to pay following a stripe link. Once sucessful, CS to send it as a lead</li>
-    <li>Customer registered but did not write a job and did not try to pay (dropped) --> CS to send as a lead</li>
+    <li>Customer registered but did not finalize the purchase or the payment failed -> in that case, CS has to create a lead in SF and send it to the rightful partner (they should include info about the country the customer tried to post to)</li>
+    <li>Customer registered and finalized his purchase -> in this case, a lead is created automatically in SF once the eComm listing is validated in FP to be sent (so the Create message is either in ACCEPTED status or is in CUSTOMER_SETUP and is waiting for delegation confirmation)</li>
 </ul>
+<p>If the lead was won:</p>
+<ul class="none">
+    <li>In SF: the lead should be converted into account or new account to be created by the selling partner</li>
+    <li>In FP: if a deal is signed by the selling partner and the customer will use FP, change the selling partner of the customer</li>
+</ul>
+
     
 <br>
     
@@ -52,7 +55,7 @@
     <li>You will be notified in Slack in eComm channel</li>
     <li>Log into <a href="https://dashboard.stripe.com/payments?limit=10" target="_blank">Stripe</a> and check the payments for the customer in question (you can see both successes and rejections; in Slack, only successful payments will be displayed)</li>
         <ul class='none'>
-            <li>People who have login: Julien, Daniel, Katrien, Mila, and Kate</li>
+            <li>People who have login: Julien, Daniel, Katrien, Lucija, Mila, and Kate (we should all have it activated in case of backing up)</li>
             <li>Login via Okta authenticator app</li>
         </ul>
     <li>Do a <a href="#Fraud">fraud check</a> (click to see the procedure)</li>
@@ -94,9 +97,16 @@
                     <li>Selling partner: The Network</li>
                     <li>Add a parent account: eComm</li>
                     <li>Billing address is mentioned in the Slack message</li>
-                    <li>Add the country as SJNWW, create a SJNWW contract with the CP as SJNWW standard</li>
+                    <li>Add the country as SJNWW and create a SJNWW contract</li>
                     <li>In the field "email sales person", put <a href="mailto:cs@the-network.com">cs@the-network.com</a></li>
-                </ul>
+                    <li>Once the contract header is created, edit the contract and add 'eComm source'!!! This is <mark>very important</mark> step as we will start to have eComm orders from 3rd parties and we need to have a way to distinguish them. You will find the information about where the order is coming from in the Slack notification. Simply choose from the drop-down options the correct source and save</li>
+                    <li>Create the Contract-Product - select either job listing standard/customized/other as per product purchased (you can always check in the PT which type is linked to standard or customized GFP and if it says n/a, you should use the type 'other')</li>
+                    <img src="resources_images/eComm_type.png">
+            </ul>
+            
+<br>
+<br>
+            
             <li>Add the SF contract ID into the FP wallet (CRM Contract ID field)</li>
             <li>In <strong>Monitoring</strong>, you can find the job itself:</li>
                 <ul class='nested'>
@@ -125,17 +135,31 @@
 
 <br>
         
-    <li>Create a PO, validate it and send it to the partner. Reply all to the email with the job listing and inform them about the OUT PO, mention this is ecomm and should be processed with shorter SLA</li>
-    <li>Probably, at the beginning, chase fully automated partners to confirm. A reminder is sent automatically after one day</li>
-    <li>The user can update or delete the job once they have access (an email with the action will be sent)</li>
+    <li>Back in SF, create a PO and validate it</li>
+    <li>In case that the eComm order came from a 3rd party (not from The Network), you will have to change The Network split accordingly</li>
+    <ul class="none">
+        <li>The Network should keep 20% (not the usual 10%) for any 3rd party eComm order. To calculate this, you should take the Total Net value and calculate 20% out of it. Then, simply edit the OUT PO and input the calculated value into the 'TN Amount' field on the bottom left of the page</li>
+        <li>To ensure your calculation is correct, verify that the 'We can invoice them' value of the OUT PO changed from 55% to 65%. The 'You can invoice us' value should stay 45%</li>
+        <img src="resources_images/eComm_split.png" width="700px" height="300px">
+    </ul>
+    
+<br>
+    <li>Once the OUT PO is issued, send it to the receiving partner via an email. Mention this is ecomm and should be processed with shorter SLA</li>
     <li>In case the receiving partner refuses the posting or needs additional information, get in touch with the user (customer)</li>
-    <li>Confirm to Sales they can send a lead to the rightful outbound partner</li>
-    <li>Check with Finance. There will be an invoice created by our accountant (they received the order payment confirmation from Stripe). Send the invoice should to the customer once received</li>
-    <li>If the lead was won:</li>
-        <ul class="none">
-            <li>In SF: the lead should be converted into account or new account to be created by the selling partner</li>
-            <li>In FP: if a deal is signed by the selling partner and the customer will use FP, change the selling partner of the customer</li>
-        </ul>
+    <li>The user can update or delete the job once they have access (an email with the action will be sent)</li>
+</ol>
+    
+<br>
+    
+    
+<h3>Finance process flow</h3>
+<ol class="noneol">
+    <li>An invoice should be created by our accountant for every successfuly processes eComm order for any order via The Network source</li>
+    <li>Once the invoice is issued, send it to the customer</li>
+    <li>Once a month, run <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00OQD000006HHQn2AO/view" target="_blank">this report</a> to check how much 3rd parties can invoice us for eComm orders coming from their website</li>
+    <li>Check correctly that the split on 'We can invoice them' is indeed 65% (meaning that the CS team correctly amended this on the OUT PO) and then, send an email to the 3rd party informing them how much they can invoice using the 'Total to invoce (35%)' column (per 3rd party, i.e., to Professia, to Pracuj, etc.)</li>
+    <li>The 'Total to invoice (35%) is a calculated field that calculates the total net of the PO x 0,35 = the amount the 3rd party can claim for this order</li>
+    <img src="resources_images/eComm_finance_check.png" width="1100px" height="300px">
 </ol>
     
 <br>
