@@ -90,7 +90,7 @@
                     <li>Add the parent customer ecommerce</li>
                     <li>There is no Salesforce Account ID for eComm clients</li>
                 </ul>
-            <li><strong>Channel</strong> is already created as email override and standard. It should NOT be delegated!</li>
+            <li><strong>Channel</strong> is already created as email override and it should NOT be delegated! (for those partners who ONLY accept advanced form, the channel is delegated automatically)</li>
             <li><strong>Wallet</strong> is already created with the credit imported; the type is Ecommerce</li>
             <li>In SF, create the new customer:</li>
                 <ul class='nested'>
@@ -99,15 +99,10 @@
                     <li>Billing address is mentioned in the Slack message</li>
                     <li>Add the country as SJNWW and create a SJNWW contract</li>
                     <li>In the field "email sales person", put <a href="mailto:cs@the-network.com">cs@the-network.com</a></li>
-                    <li>Once the contract header is created, edit the contract and add 'eComm source'!!! This is <mark>very important</mark> step as we will start to have eComm orders from 3rd parties and we need to have a way to distinguish them. You will find the information about where the order is coming from in the Slack notification. Simply choose from the drop-down options the correct source and save</li>
-                    <li>Create the Contract-Product - select either job listing standard/customized/other as per product purchased (you can always check in the PT which type is linked to standard or customized GFP and if it says n/a, you should use the type 'other')</li>
-                    <img src="resources_images/eComm_type.png">
-            </ul>
-            
-<br>
-<br>
-            
-            <li>Add the SF contract ID into the FP wallet (CRM Contract ID field)</li>
+                    <li>Once the contract header is created, edit the contract and add 'eComm source' which you can find the the 'Comment' section of the contract. This is <mark>very important</mark> step as we will start to have eComm orders from 3rd parties and we need to have a way to distinguish them. You will find the information about where the order is coming from in the Slack notification. Use the drop-down menu and choose the correct source</li>
+                    <li>Create the Contract-Product - select either job listing standard/customized/other as per product purchased (you can check which country channel was created in FP to ensure that the correct type is used in SF)</li>
+                </ul>
+            <li>Add the SF contract ID into the FP wallet (CRM Contract ID field) and change the wallet name to follow this format: Customer_ecomm_C000000</li>
             <li>In <strong>Monitoring</strong>, you can find the job itself:</li>
                 <ul class='nested'>
                     <li>The customer name is ecommerce (once the listing is sent this will change into the acutal customer name)</li>
@@ -154,8 +149,8 @@
     
 <h3>Finance process flow</h3>
 <ol class="noneol">
-    <li>An invoice should be created by our accountant for every successfuly processes eComm order for any order via The Network source</li>
-    <li>Once the invoice is issued, send it to the customer</li>
+    <li>An invoice should be created by our accountant for every successfuly processes eComm order for any order via The Network source (the invoice is requested once we see a Stripe payment come into our bank account)</li>
+    <li>Once the invoice is issued, Finance sends the invoice to the CS person who processed the eComm order, and they send it to the clien</li>
     <li>Once a month, run <a href="https://thenetwork.lightning.force.com/lightning/r/Report/00OQD000006HHQn2AO/view" target="_blank">this report</a> to check how much 3rd parties can invoice us for eComm orders coming from their website</li>
     <li>Check correctly that the split on 'We can invoice them' is indeed 65% (meaning that the CS team correctly amended this on the OUT PO) and then, send an email to the 3rd party informing them how much they can invoice using the 'Total to invoce (35%)' column (per 3rd party, i.e., to Professia, to Pracuj, etc.)</li>
     <li>The 'Total to invoice (35%) is a calculated field that calculates the total net of the PO x 0,35 = the amount the 3rd party can claim for this order</li>
