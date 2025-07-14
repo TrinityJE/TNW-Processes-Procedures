@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">    
+    
+<br>
+    
+<h2>Import of direct feed credits into FlashPost</h2>
+    
+<p>When there is a new quote including job credits with <strong>direct feed as posting method</strong>, we need to import these in FlashPost.</p>
+<p>You should import the credits upon noticing a direct feed product in the quote when checking it. Soon, there will be an automated Slack notification that will let you know there is a direct feed that needs to be imported.</p>
+<p>Import the contract in FlashPost via Customer tab > Import (it is basically the same process as for FP Regular credits). However, do NOT delegate the channels! Currently the system still offers delegation, but you need to uncheck the box and NOT delegate. Soon, this step will be automatically skipped when importing direct feed credits.</p>
+<p>In case this is a <strong>new customer</strong> in FlashPost, you will have to create the customer account first. For that, you will need the logo (should be in SF as it is mandatory now, but there might be cases when older customers who always used direct feeds will need to get set up, so then ask the partner for the logo). As a posting method, choose Recruiter Application.</p>
+<p>After import, what happens is:</p>    
+<ul class='none'>
+    <li>the <strong>PO</strong> is created in Salesforce</li>
+    <li>the <strong>wallet</strong> is created and the credits are marked as “Direct consumption credits” in the wallet (or as “No FlashPost credits” in Customers > Wallet)</li>
+</ul>
+<p>The credits are not available for posting via FlashPost.</p>
+    
+<br>
+    
+<p>When it comes to updating consumption, this is a new task for the receiving partner. If consumption for at least one direct feed product hasn't been updated in the last 30 days or more, the receiving partners will receive an email (on Mondays) asking them to update the consumption. </p>
+    
+    
+</main>
+
+    
+<br>
+<br>
+<br>
+<br>
+    
+
+    
+ <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>  
+    
+    
+</body>
+
+
+
+
+
+
+</html>
