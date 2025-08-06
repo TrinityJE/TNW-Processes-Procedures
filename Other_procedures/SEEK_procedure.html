@@ -91,14 +91,13 @@
             <li>Go to <a href="https://www.oanda.com/currency-converter/en/?from=USD&to=EUR&amount=1" target="_blank">OANDA</a> and exchange the AUD amount into the EUR amount</li>
             <li>Input the EUR amount into the file (again, just fill in the number, the EUR will be added automatically)</li>
             <li>The system should automatically calculate column N and O, the ‘They will invoice us AUD/EUR’ part (if not, simply do CTR+D, and the system will do the necessary)</li>
-            <li>In case of GFP, leave the column P (PO reference) empty; in case of a single listing, fill it in</li>
+            <li>In case of GFP, leave the column P (PO reference) empty; in case of a single listing, fill it in (we are talking about the OUT PO for SEEK)</li>
             <li>In column Q, fill in the NET unit price of the GFP package or the single listing price (you will have to search this information in SF; you can use the C/CP reference from the FP posting request)</li>
             <li>Columns R and T should again <strong>automatically fill in</strong> (if not, simply do CTR+D, and the system will do the necessary)</li>
             <ul class="nested3">
-                <li>For GFP, leave column U as n/a; if there will be a different split than 45%, Kate will adjust it manually once the PO is created</li>
+                <li>For GFP, leave column S as n/a; if there will be a different split than 45%, Kate will adjust it manually once the PO is created</li>
                 <li>For Singles, you already have the PO, so if the split is different than 45%, put n/a into column R, and input the correct amount that they can invoice us in column S (with a comment on what the split is)</li>
-                <li>Column T is only available on GFP as we have to watch if we are losing or gaining on the given listing (if the difference is minus, we are gaining, and we put it in <strong>green</strong>; if it is positive, then we are losing, and we put it in <strong>red</strong>)</li>
-                <li>There is no difference column on singles as SEEK wants to charge us according to our POs, and not according to their variable pricing, as we do for GFP</li>
+                <li>Column T (in both GFP and singles) serves to monitor the differences between SEEK's variable pricing and our prices. As of May 2025, SEEK is invoiving us based on our prices, so all gains (and potential losses) stay with them (no longer us). If the difference is in minus, it should be marked in <strong>green</strong>; if it is positive, that means loss, and we should mark it in <strong>red</strong>)</li>
             </ul>
             <li>In the GFP tab, there is an extra column U asking if this is an upfront PO; in most cases, it is not, so say no</li>
             <li>Leave the rest of the columns empty as they are filled in by Kate once we receive invoices </li>
