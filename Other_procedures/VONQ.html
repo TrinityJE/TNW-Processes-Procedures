@@ -1,0 +1,107 @@
+<!DOCTYPE htlm>
+
+<html lang="en">
+
+<head>
+    <meta charset='UTF8'> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Network Internal Website</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Resources/CSS/style.css">
+</head> 
+
+    
+<body>
+    
+<!-- Navigation --> 
+
+<header>
+    <nav class="topnav">
+        <a class="active" href="../index.html">Home</a>
+        <a href="mailto:katerina.mala@the-network.com">Contact</a>
+        <img id="logo" src="../Resources/Images/TN_Logo_2019_white.png" alt="The Network Logo">
+        <input id="searchbar" placeholder="Search.." type="text" name="search" onkeyup="search_title()"> <! –– changed to correspond to test.js ––>
+    </nav>
+</header>
+
+    
+<!-- Main section --> 
+    
+<main class="div">  
+    
+<br>
+    
+<h2>The VONQ procedure</h2>
+<p>Whenever you receive a request from StSt.de to set-up a new end customer for VONQ, you should follow this procedure:</p> 
+<ul class="none">
+    <li>In Salesforce, the customer needs to be set up under end name of a company (by DE), with parent company as Reseller – VONQ, here is an example of one of the VONQ accounts:</li>
+    <img src="Resources_Other/VONQ_1.png"><br><br>
+    <li>DE sends a WW under the end customer (under Virtu Hire in this above example), and DE team sends us an email with all information to start the set up</li>
+    <li>TNW needs to create a contract in SF manually with the following new dates: (valid until 2026!!!)</li>
+    <ul class="nested">
+        <li>Contract start date: 30/10/2025</li>
+        <li>Contract end date: 29/10/2026</li>
+        <li>Duration: 12 months</li>
+    </ul>
+    <li>TNW creates manually a customer in FP (with extension _VONQ_DE in the name), and delegates channels in FP manually (as per DE email details):</li>
+    <img src="Resources_Other/VONQ_2.png"><br><br>
+    <li>We need to make sure to tag 'VONQ' as a provider under account in FP (when creating FP customer):</li>
+    <img src="Resources_Other/VONQ_3.png"><br><br>
+    <li>TNW creates FP wallet manually as a 'customized' one:</li>
+    <img src="Resources_Other/VONQ_4.png"><br><br>
+    <li>In FP wallet we need to add the customer and the credits manually (credits always are added as GFP – 20 credits by default to everyone (20 is a safe number for 1 year ahead). As for the type, DE team in their original request should indicate this - the country and type of credits (standard or customized).</li>
+    <li>We need to send the FP customer ID to DE team: <i>(for example, see below)</i></li>
+    <img src="Resources_Other/VONQ_5.png"><br><br>
+    <li>We need to inform the receiving partner(s) via an email, explaining VONQ set up and why they cannot see anything in SF yet. At the same time, we should confirm to DE that the delegation(s) is done, including the customer ID as per point above).</li>
+    <li>Example of an email to the receiving partner:</li>
+    <p><i>Dear Pnet Team,<br>
+       Please, note that this is a special set up for an end customer of VONQ, therefore you won’t be able to see their contract details in SF.<br> 
+       Contract no: C062654.<br> 
+       Contract start date: 2025/10/31<br>
+       Contract end date: 2026/10/30<br> 
+       Their listings will be covered with monthly Pos at the following price:<br>
+       Product: Pnet | Standard Listing unit price rate - 15 % AE and - 1 % Reseller discount. <i>(Comment: this information has to be provided in original DE request. If they missed providing it, ask them for more details)</i><br>
+       <br>
+       Please, let me know if you have any questions.<br> 
+       Kind regards,<br>
+       The Network Team
+       <br>
+    </i></p>
+    <li>Example of an email to DE:</li>
+    <p><i>Hi DE,<br>
+       Here is FP customer id for the provider: 4978905965928081177.<br>
+       The delegation email was sent out to Pnet team as well. Please, allow them few days to set it up in FP.<br>
+       Kind regards,<br>
+       The Network Team
+    </i></p>
+</ul>
+        
+    
+
+
+<br><br><br><br>
+        
+        
+</main>
+    
+    
+   <!-- Footer --> 
+    
+<footer>
+    <div>
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>  
+    
+    
+</body>
+
+
+
+
+
+
+</html>
