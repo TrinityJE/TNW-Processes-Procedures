@@ -73,7 +73,7 @@
     <li>All in xxxx = the main tab where we are gathering all the info and doing the actual calculations</li>
     <ul class='nested'>
         <li>We can find here ALL partners, even those that we do not invoice or that we do not work with anymore (majority are now hidden), including our shareholders JobCloud + StepStone Group + Figaro</li>
-        <li>Here we decide if a partner should have a full / half / or none recharge (the general rule is = if the sum of Sales is more than 30.000€, then full recharge, if it is less than 30.000€, then half recharge + some partners (less then 5.000€ as per above) are not recharge at all</li>
+        <li>Here we decide if a partner should have a full / half / or none recharge (the general rule is = if the sum of Sales is more than 30.000€, then full recharge, if it is less than 20.000€, then half recharge + some partners (less then 5.000€ as per above) are not recharge at all</li>
     </ul>
     <li>Partners Values (hidden) = data about partner's active and received sales</li>
 </ul>
@@ -86,11 +86,11 @@
     <li>Then, simply copy paste the rest of the information (profile, company name, username, active, last login, and created date)</li>
     <ul class='nested'>
         <li>Column G (active) might give us an error as it is not a number – simply click on the error and say you want to convert it to a number</li>
-        <li>For columns H (last login) and I (create date), change the format to short date</li>
     </ul>
     <li>Sense check that each entry has a correct company name (correct if you see some discrepancies and synchronize the naming)</li>
-    <li>Once the data in the tab ‘CRM Users data’ is correct, we simply take it and copy paste it into the tab ‘CRM Users xxxx’ – careful when coping (you have to copy the formula), double check that NO old data stayed in</li>
+    <li>Once the data in the tab ‘CRM Users data’ is correct, we simply take it and copy paste (! use Paste special -> Paste Values -> Values &amp; Number Formatting) it into the tab ‘CRM Users xxxx’ – careful when coping (you have to copy the formula), double check that NO old data stayed in</li>
     <li>In the tab 'CRM Users xxx', refresh the pivot table</li>
+    <li>If you run into error with 'Active' again - if you have an error on the cell - use the 'Convert to number' option of the error</li>
 </ul>
 
 <p>4. Now we move to the tab '<strong>Partners values'</strong> to get the accurate sales data (we need to unhide the tab):</p>
