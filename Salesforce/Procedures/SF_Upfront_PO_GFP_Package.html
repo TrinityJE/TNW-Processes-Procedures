@@ -36,22 +36,53 @@
 <p>In exceptional cases, it is possible to create an upfront PO from a GFP package to block certain credits/amount for the receiving partner.</p>
 <p>Always warn the selling partner that giving an upfront PO from a GFP package can have as a consequence loss of credits (in case the customer does not post the number of jobs that were given via the upfront PO, they will lose those).</p>
 <p>To create an upfront PO from a GFP package, please follow <strong>this procedure:</strong></p>
-<ul class='none'>
-    <li>In <strong>SF</strong>, follow these two steps:</li>
-    <ul class="nested">
-        <li>Create <strong>an upfront PO</strong> for the number of credits requested from the GFP package in question to the specific receiving partner; if this PO is issued to cover protection, ensure that you put the following comment in the <strong>justification field</strong> of the IN PO: “Upfront PO to cover protection”</li>
-        <li>Create an administrative CP for local listings (the same amount of credits for which the upfront PO was created) for the receiving partner in question but with 0€ unit price (do NOT issue PO for it); only needed if the jobs will be posted via FP</li>
-    </ul>
-    <li>In <strong>FP</strong>, follow these two steps: </li>
-    <ul>
-        <li>Deduce the number of credits equal to the upfront PO from the GFP package in question (put a comment)</li>
-        <li>Import the local credits to FP (only in case the jobs should be posted via FP; not needed in case of direct access)</li>
-    </ul>
-</ul>
-    
 
 <br>
+
+<p><strong>UPFRONT PO for covering protection</strong></p>
+<p><strong>Scenario 1:</strong> the upfront PO was requested BEFORE the CP is imported in FP (the ideal scenario)</p>
+<ul class='none'>
+    <li>Create the upfront PO for the receiving partner</li>
+    <li>Import the CP -> all the credits will be imported, but the upfront PO credits will be ignored for monthly PO creation</li>
+    <li>It is during the import itself that the system will suggest creating an upfront set-up to make sure the upfront credits are reserved:</li>
+    <ul class="nested">
+        <li>Copy the CP reference</li>
+        <li>Go to Admin Console -> Credits -> Set upfront GPFs</li>
+        <li>Here, insert the CP reference <mark>(KM: Why does it say Contract Product Name???)</mark>, select the concerned receiving job board, and the number of upfront credits</li>
+        <li>The system will reserve the credits for the receiver (with no 80% rule limit)</li>
+    </ul>
+    <li>Then, in the wallet, in the <strong>distribution tab</strong>, you will see there is a new entry for upfront GFP with the reserved credits  unit should be set on 1, and the price should be the total price of the product.</li>
+    <li>You do have the right to undo it in case the upfront PO get cancelled -> simply repeat the same steps in the Admin Console, but imput 0 into the Upfront credits section</li>
+</ul>
+<p><strong>Scenario 2:</strong> the upfront PO was requested AFTER the CP was already imported in FP </p>
+<ul class='none'>
+    <li>The difference with Scenario 1 is that you do NOT import anything in FP anymore</li>
+    <li>Simply follow the process above from the Admin Console part on</li>
+</ul>
+    
+<br><br>
+    
+<p><strong>Upfront PO for DIRECT ACCESS:</strong></p>
+<p>When creating an upfront PO from GFP to have the credits used via direct posting method (such as Strabag), the process is different.</p>
+
+<br>
+
+<p>Scenario 1: CP not yet imported</p>
+<ul class="none">
+    <li>Ideally, you split the CP in two -> one for the direct postings with 'direct' as a posthing method, and one for the FP postings with 'Regular FP' as a posting method; hence, you finish with two distinctive CPs (always use a comment to say what you did and why</li>
+    <li>Issue a manual PO for the CP with the direct posting method <mark>(KM: awaiting Julien's feedback about 'not listing product')</mark></li>
+    <li>IMport the other CP in FlashPost</li>
+</ul>
+<p>Scenario 2: CP already imported</p>
+<ul class="none">
+    <li>Create a manual upfront PO for the number of credits to be used for the direct postings to the receiving partner</li>
+    <li>Manually deduct that number of credits in the FlashPost wallet</li>
+</ul>    
+    
+<br>
 <br>    
+    
+
     
 
 
