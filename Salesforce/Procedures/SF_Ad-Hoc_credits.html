@@ -33,13 +33,13 @@
 <main class="div">    
 <br>
 <h2>How to treat ad-hoc products created in SF?</h2>    
-<p>Whenever the selling partner creates a quote that contain <strong>'ad -hoc' product</strong>, the system NO LONGER creates a PO for it automatically. <mark>(KM: I have doubt here - is it for all types, or only job listings?)</mark></p>
-<p>Admin must change the product into another SF product (standard, other, customized, alljobs, budget, etc.), in order to be able to import it, and for the PO to be created. <mark>(KM: I have doubt here again - shoudl we be changing ALL ad-hoc products, or just listing products?)</mark></p>
-<p>If you encounter a quote with <strong>'ad-hoc' job listing product</strong> <mark>(KM: Again, - is it for all types, or only job listings?)</mark>, follow this process:</p>
-<p>If you encounter a quote with <strong>'ad-hoc' job listing product</strong> <mark>(KM: Again, - is it for all types, or only job listings?)</mark>, follow this process:</p>
+<p>Whenever the selling partner creates a quote that contain <strong>'ad -hoc' listing product</strong>, the system NO LONGER automatically creates a PO for it.</p>
+<p>Admin should always change the product into another non-ad-hoc listing product (standard/customize/other job listing).</p>
+<p>Why is this necessary? Because the listing products will ONLY be importable in FlashPost once the product is adjusted.</p>    
+<p>If you encounter a quote with <strong>'ad-hoc' listing product</strong>, follow this procedure:</p>
 <ul class='none'>
-    <li>Change the CP product into an existing one (check for comments in the quote, like alljobs, or contact the seller to get the correct information)</li>
-    <li>For non-listing products or listing products that are NOT importable into FP (like alljobs), you have to create the PO manually</li>
+    <li>Change the CP product into an non-ad-hoc one (check for comments in the quote, or contact the seller to get the correct information)</li>
+    <li>For listing products that are NOT importable into FP (like Alljobs), create the PO manually</li>
     <li>For listing products that are importable into FP, depending on the posting method, you should:</li>
     <ul class='nested'>
         <li>In case of Self-Service, inform the selling partner that the change of the CP product is done and that they can import it to FP</li>
@@ -47,7 +47,9 @@
         <li>In both cases, the PO will be created automatically upon the import to FP</li>
     </ul>
 </ul>
-    
+<p>For <strong>non-listing ad-hoc products</strong> e.g. cvdb, communication, extra region, etc, the PO will be created automatically, and the CP created in Salesforce does NOT have the mention ad-hoc in the label.</p>
+<p><strong>NOTE:</strong> Sometimes partners make a mistake and create a non-listing ad-hoc product like extra region as a listing product, and the receiving partner approves the quote before we had a chance to revise. In that case, we should amend the CP and create the PO manually anyway.</p>
+
     
 <br>
 <br>    
@@ -66,3 +68,10 @@
 </footer>      
     
 </body>
+
+
+
+
+
+
+</html>
